@@ -1,37 +1,719 @@
 {
-  "Cargo": {
-    "Dubai (DXB)": {
-      "email": "cargo.dxb@flydubai.com",
-      "phone": "+971 4 123 4567",
-      "hours": "Mon–Fri 09:00–18:00 GST"
-    }
-  },
   "GDS Support": {
-    "Global": {
-      "email": "gds.support@flydubai.com",
-      "phone": "+971 4 555 0000",
-      "hours": "24/7"
-    }
-  },
-  "Baggage Services": {
-    "Dubai (DXB)": {
-      "email": "baggage.dxb@flydubai.com",
-      "phone": "+971 4 987 6543",
-      "hours": "24/7"
+    "Agency": {
+      "email": "AgencySupport@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Staff": {
+      "email": "FZGDS@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Agency 2": {
+      "email": "StaffTravel@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Outstation": {
+      "email": "fzgds@flydubai.com",
+      "phone": "",
+      "hours": ""
     }
   },
   "Agency Support": {
-    "UAE": {
-      "email": "agency.uae@flydubai.com",
-      "phone": "+971 4 444 1212",
-      "hours": "Sun–Thu 09:00–17:00"
+    "Support": {
+      "email": "AgencySupportUAE@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Outstation": {
+      "email": "agencysupport@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Visa": {
+      "email": "",
+      "phone": "+973 1619 9399",
+      "hours": ""
+    },
+    "Agency": {
+      "email": "",
+      "phone": "971 4 6033090",
+      "hours": ""
+    },
+    "Agency 2": {
+      "email": "",
+      "phone": "971 4 6033555",
+      "hours": ""
     }
   },
-  "Let’s Talk": {
-    "Customer Care": {
+  "General": {
+    "Regional": {
+      "email": "Ahad.Mohi@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Aera": {
+      "email": "Alexandra.Bazorkina@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Aera 2": {
+      "email": "Andrea.Catto@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Senior": {
+      "email": "Binod.Abraham@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Scott": {
+      "email": "Boniventure.Gounder@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Step": {
+      "email": "CallcenterDXBops@flydubai.com",
+      "phone": "97146033707",
+      "hours": ""
+    },
+    "Connect": {
+      "email": "Connect@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Nepal": {
+      "email": "Devinder.Bindra@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Aera 3": {
+      "email": "Dilmurodkhon.B@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Aera 4": {
+      "email": "Dilshod.Sheraliev@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Send": {
+      "email": "FCC@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Staff": {
+      "email": "FZOKTB@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Nawi": {
+      "email": "GM@nawisaadi.com",
+      "phone": "+971 6 55 44 553",
+      "hours": ""
+    },
+    "Send 2": {
+      "email": "ITSD@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Commercial": {
+      "email": "Kiran.Kumar@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Regional 2": {
+      "email": "Maneesh.Gupta@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Senior 2": {
+      "email": "Manish.mehta@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Senior 3": {
+      "email": "Manoj.Menon@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Iraq": {
+      "email": "Marina.Kuznechevskaya@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Visachange": {
+      "email": "Mishal@dahrtours.com",
+      "phone": "97142955262",
+      "hours": ""
+    },
+    "Commercial 2": {
+      "email": "Pooja.Tyagi@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Channel": {
+      "email": "ResSupport.ASR@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Commercial 3": {
+      "email": "Saleem.Aringal@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Scott 2": {
+      "email": "Scott.Evans@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Please": {
+      "email": "Security@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Commercial 4": {
+      "email": "Seraw.Ejigu@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Passport": {
+      "email": "Skywards@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Supervisor": {
+      "email": "TL@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Manager": {
+      "email": "Tareq.Alkhalil@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Ethiopia": {
+      "email": "Tawheed.Rashid@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Commercial 5": {
+      "email": "Temima.Kemal@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Finland": {
+      "email": "Vanya.Atanasova@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Commercial 6": {
+      "email": "Vijayakumaran.Avili@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Kite": {
+      "email": "a2a@kite.travel",
+      "phone": "+971 4 325 77 44",
+      "hours": ""
+    },
+    "Agent": {
+      "email": "agnecysupport@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Falcon": {
+      "email": "allresteamleaders@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Step 2": {
+      "email": "ask@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Weapon": {
+      "email": "bt.supervisors@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Collect": {
+      "email": "caresupport@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Step 3": {
+      "email": "catering.flydubai@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Scott 3": {
+      "email": "catering@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Step 4": {
+      "email": "cc.quality@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Serbia": {
+      "email": "e.fedorova@tmg.travel",
+      "phone": "",
+      "hours": ""
+    },
+    "Address": {
+      "email": "eShop@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Page": {
+      "email": "emil.faradjev@asbflydubai.tm",
+      "phone": "",
+      "hours": ""
+    },
+    "General": {
+      "email": "fzOKTB@flydubai.com",
+      "phone": "+971 52 3829 090",
+      "hours": ""
+    },
+    "General 2": {
+      "email": "fzoktb@flydubai.com",
+      "phone": "65.1 30 30-44",
+      "hours": ""
+    },
+    "Senior 4": {
+      "email": "gehan.silva@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Skywards": {
+      "email": "goldSkywards@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Travel": {
+      "email": "holidaysoperation@flydubai.com",
+      "phone": "97165313533",
+      "hours": ""
+    },
+    "Aera 5": {
+      "email": "i.ibrahimova@btflydubai.az",
+      "phone": "",
+      "hours": ""
+    },
+    "Mishal": {
+      "email": "malik@travellerschoice.ae",
+      "phone": "",
+      "hours": ""
+    },
+    "Smart": {
+      "email": "naresh@smarttrip.ae",
+      "phone": "97142695033",
+      "hours": ""
+    },
+    "Khyber": {
+      "email": "neeta@khybertour.com",
+      "phone": "+971 42 522486",
+      "hours": ""
+    },
+    "Press": {
+      "email": "news@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "General 3": {
+      "email": "pilot.recruitment@flydubai.com",
+      "phone": "8) 10 156 73",
+      "hours": ""
+    },
+    "Important": {
+      "email": "platinumSkywards@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Supervisor 2": {
+      "email": "reservationssupport@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Step 5": {
+      "email": "reservationsupport@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Arooha": {
+      "email": "shj@aroohatours.com",
+      "phone": "+971 42 386 066",
+      "hours": ""
+    },
+    "Passport 2": {
+      "email": "silverSkywards@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Aera 6": {
+      "email": "sophie.azarashvili@voyager.ge",
+      "phone": "",
+      "hours": ""
+    },
+    "Step 6": {
+      "email": "stafftravel@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "General 4": {
+      "email": "support@flydubaipk.com",
+      "phone": "80008003",
+      "hours": ""
+    },
+    "Hadaf": {
+      "email": "ticketing@alhadaftourism.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Vnukovo": {
+      "email": "",
+      "phone": "+74957953838",
+      "hours": ""
+    },
+    "Call": {
+      "email": "",
+      "phone": "+92) 21 111 225 539",
+      "hours": ""
+    },
+    "Akbar": {
+      "email": "",
+      "phone": "+971 4356 1133",
+      "hours": ""
+    },
+    "Bank": {
+      "email": "",
+      "phone": "009714 2130000",
+      "hours": ""
+    },
+    "Dubai": {
+      "email": "",
+      "phone": "046033556",
+      "hours": ""
+    },
+    "Unable": {
+      "email": "",
+      "phone": "10557) 25.7",
+      "hours": ""
+    },
+    "World": {
+      "email": "",
+      "phone": "10557) 25.8",
+      "hours": ""
+    },
+    "Origin": {
+      "email": "",
+      "phone": "135445030005339",
+      "hours": ""
+    },
+    "Note": {
+      "email": "",
+      "phone": "140.7 45 45-59",
+      "hours": ""
+    },
+    "Mobile": {
+      "email": "",
+      "phone": "15.7.18 ......................................................................................................................... 287 65",
+      "hours": ""
+    },
+    "Skyward": {
+      "email": "",
+      "phone": "2020 7 2019",
+      "hours": ""
+    },
+    "Note 2": {
+      "email": "",
+      "phone": "208.95 60 60-90",
+      "hours": ""
+    },
+    "Process": {
+      "email": "",
+      "phone": "225 39.23.1.1.9",
+      "hours": ""
+    },
+    "Process 2": {
+      "email": "",
+      "phone": "227 39.23.1.1.11",
+      "hours": ""
+    },
+    "Process 3": {
+      "email": "",
+      "phone": "228 39.23.1.1.12",
+      "hours": ""
+    },
+    "Process 4": {
+      "email": "",
+      "phone": "229 39.23.1.1.13",
+      "hours": ""
+    },
+    "Process 5": {
+      "email": "",
+      "phone": "230 39.23.1.1.14",
+      "hours": ""
+    },
+    "History": {
+      "email": "",
+      "phone": "39.23.1.1.10",
+      "hours": ""
+    },
+    "History 2": {
+      "email": "",
+      "phone": "39.23.1.1.15",
+      "hours": ""
+    },
+    "Scenario": {
+      "email": "",
+      "phone": "39.23.1.1.7.1",
+      "hours": ""
+    },
+    "Headset": {
+      "email": "",
+      "phone": "40.00 11.00",
+      "hours": ""
+    },
+    "AED": {
+      "email": "",
+      "phone": "45.15 16 16-29",
+      "hours": ""
+    },
+    "Email": {
+      "email": "",
+      "phone": "600 544 445",
+      "hours": ""
+    },
+    "Call 2": {
+      "email": "",
+      "phone": "600 544445",
+      "hours": ""
+    },
+    "The": {
+      "email": "",
+      "phone": "6005 45445",
+      "hours": ""
+    },
+    "Next": {
+      "email": "",
+      "phone": "8) 12 162 73",
+      "hours": ""
+    },
+    "Recommended": {
+      "email": "",
+      "phone": "9) 16 156 73",
+      "hours": ""
+    },
+    "Holidays": {
+      "email": "",
+      "phone": "971 50 107 2852",
+      "hours": ""
+    },
+    "The 2": {
+      "email": "",
+      "phone": "971 56 998 8950",
+      "hours": ""
+    },
+    "Choice": {
+      "email": "",
+      "phone": "97142399903",
+      "hours": ""
+    },
+    "Smart 2": {
+      "email": "",
+      "phone": "97143214584",
+      "hours": ""
+    },
+    "Tour": {
+      "email": "",
+      "phone": "97165279272",
+      "hours": ""
+    }
+  },
+  "Baggage Services": {
+    "Baggage": {
+      "email": "BaggageServices@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Baggage 2": {
+      "email": "baggageservices@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "General": {
+      "email": "",
+      "phone": "1419091331687",
+      "hours": ""
+    },
+    "Customer": {
+      "email": "",
+      "phone": "2023 ........................................ 269 60.8",
+      "hours": ""
+    }
+  },
+  "Visa / Amer": {
+    "Business": {
+      "email": "BusinessTeam@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Business 2": {
+      "email": "GroupReservations@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Contact": {
+      "email": "Visachange@smarttravels.ae",
+      "phone": "",
+      "hours": ""
+    },
+    "Akbar": {
+      "email": "aegroupdesk@akbargulf.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Passengers": {
+      "email": "visa.dxb@flydubai.com",
+      "phone": "",
+      "hours": ""
+    }
+  },
+  "Cargo": {
+    "Note": {
+      "email": "Cargo.BEG@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Cargo": {
+      "email": "Cargo.SHD@flydubai.com",
+      "phone": "+971 4 2111111",
+      "hours": ""
+    },
+    "Cargo 2": {
+      "email": "Cargo.dubaisales@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Cargo 3": {
+      "email": "Cargo@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Firew": {
+      "email": "Firew.Desta@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Call": {
+      "email": "",
+      "phone": "+97146033556",
+      "hours": ""
+    }
+  },
+  "Sales / Corporate": {
+    "Step": {
+      "email": "Charter.Sales@flydubai.com",
+      "phone": "",
+      "hours": ""
+    }
+  },
+  "Customer Care / Let’s Talk": {
+    "Center": {
+      "email": "Letstalk@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Outstation": {
+      "email": "agencysupportUAE@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "General": {
       "email": "letstalk@flydubai.com",
-      "phone": "+971 600 54 44 45",
-      "hours": "Daily 00:00–24:00"
+      "phone": "",
+      "hours": ""
+    },
+    "Contact": {
+      "email": "mediarelations@flydubai.com",
+      "phone": "600 54 44 45",
+      "hours": ""
+    },
+    "Russia": {
+      "email": "",
+      "phone": "+7 (495) 215 1630",
+      "hours": ""
+    },
+    "Russia 2": {
+      "email": "",
+      "phone": "+971 600 544 445",
+      "hours": ""
+    },
+    "Important": {
+      "email": "",
+      "phone": "046033635",
+      "hours": ""
+    },
+    "Member": {
+      "email": "",
+      "phone": "600 555 555",
+      "hours": ""
+    },
+    "Contact 2": {
+      "email": "",
+      "phone": "971501122334",
+      "hours": ""
+    }
+  },
+  "Media / PR": {
+    "Manager": {
+      "email": "Pran.Dasan@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Princess": {
+      "email": "flights@princesstourism.com",
+      "phone": "",
+      "hours": ""
+    }
+  },
+  "Business / Groups": {
+    "Caller": {
+      "email": "groupreservations@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Holidays": {
+      "email": "holidays@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Group": {
+      "email": "holidaysgroups@flydubai.com",
+      "phone": "",
+      "hours": ""
+    },
+    "Baggage": {
+      "email": "",
+      "phone": "+971 50 304 0810",
+      "hours": ""
+    }
+  },
+  "Airport / DXB": {
+    "Cartrawler": {
+      "email": "",
+      "phone": "+44 2034326206 79.3",
+      "hours": ""
+    },
+    "Marhaba": {
+      "email": "",
+      "phone": "+971 800 6274222",
+      "hours": ""
     }
   }
 }

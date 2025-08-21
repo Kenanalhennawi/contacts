@@ -1,7 +1,0 @@
-name = "flydubai-contacts-worker"
-main = "worker.js"
-compatibility_date = "2025-08-01"
-
-[vars]
-FROM_NAME = "Flydubai Contacts"
-ALLOWED_ORIGIN = "https://yourusername.github.io"

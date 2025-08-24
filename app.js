@@ -4,29 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const BRAND_SIGNATURE = cfg.BRAND_SIGNATURE || '— Flydubai Contact Centre';
 
     const getEl = (id) => document.getElementById(id);
-    const deptEl = getEl('dept');
-    const searchEl = getEl('search');
-    const suggestEl = getEl('suggest');
-    const cityEl = getEl('city');
-    const cardEl = getEl('contactCard');
-    const cardTitleEl = getEl('cardTitle');
-    const cardBadgeEl = getEl('statusPill');
-    const cardEmailsEl = getEl('emails');
-    const cardPhonesEl = getEl('phones');
-    const cardHoursEl = getEl('hours');
-    const cardAddrEl = getEl('address');
-    const cardMapLinkEl = getEl('mapLink');
-    const mapImgEl = getEl('mapImg');
-    const mapRowEl = getEl('mapRow');
-    const paxEmailEl = getEl('paxEmail');
-    const paxPhoneEl = getEl('paxPhone');
-    const paxNoteEl = getEl('note');
-    const previewEl = getEl('preview');
-    const sendEmailBtn = getEl('sendEmail');
-    const openWABtn = getEl('openWA');
-    const copyBtn = getEl('copyMsg');
-    const statusEl = getEl('status');
-    const hpEl = getEl('company');
+    const deptEl = getEl('dept-select');
+    const searchEl = getEl('search-input');
+    const suggestEl = getEl('suggestions-container');
+    const cityEl = getEl('city-select');
+    const cardEl = getEl('contact-card');
+    const cardTitleEl = getEl('card-title');
+    const cardBadgeEl = getEl('card-badge');
+    const cardEmailsEl = getEl('card-emails');
+    const cardPhonesEl = getEl('card-phones');
+    const cardHoursEl = getEl('card-hours');
+    const cardAddrEl = getEl('card-address');
+    const mapContainerEl = getEl('map-container');
+    const mapImgEl = getEl('map-image');
+    const mapLinkEl = getEl('map-link');
+    const paxEmailEl = getEl('pax-email');
+    const paxPhoneEl = getEl('pax-phone');
+    const paxNoteEl = getEl('pax-note');
+    const previewEl = getEl('message-preview');
+    const sendEmailBtn = getEl('send-email-btn');
+    const sendWhatsappBtn = getEl('send-whatsapp-btn');
+    const openWABtn = getEl('open-whatsapp-btn');
+    const copyBtn = getEl('copy-message-btn');
+    const statusEl = getEl('status-message');
+    const hpEl = getEl('company'); // Anti-spam field
 
     let dataCache = {};
     let searchIndex = [];
@@ -38,12 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'GDS Support': { url: 'contacts.json', kind: 'simple' },
         'Baggage Services': { url: 'contacts.json', kind: 'simple' },
         'Agency Support': { url: 'contacts.json', kind: 'simple' },
-        'Let’s Talk': { url: 'contacts.json', kind: 'simple' }
+        'Let\'s Talk': { url: 'contacts.json', kind: 'simple' }
     };
 
     const toLower = (s) => String(s || '').toLowerCase();
-    const cleanAddress = (a) => String(a || '').replace(/download map/gi, '').trim();
-    const getPlaceIdFromUrl = (u) => (String(u || '').match(/query_place_id=([^&]+)/i) || [])[1] || '';
     const createMapLink = (pid) => pid ? `https://www.google.com/maps/search/?api=1&query_place_id=${encodeURIComponent(pid)}&hl=en-US` : '';
 
     async function loadJson(url) {
@@ -63,9 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function buildLocationIndex(data, dept) {
         if (!data || !Array.isArray(data.entries)) return [];
         return data.entries.map(item => ({
-            ...item,
-            type: dept,
-            key: `${toLower(item.city)}|${toLower(item.country)}|${toLower(item.iata)}`
+            ...item, type: dept, key: `${toLower(item.city)}|${toLower(item.country)}|${toLower(item.iata)}`
         }));
     }
 
@@ -80,10 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSuggestions([]);
 
         const data = await loadJson(meta.url);
-        if (!data) {
-            statusEl.textContent = `Failed to load data for ${dept}.`;
-            return;
-        }
+        if (!data) return;
 
         if (meta.kind === 'location') {
             searchIndex = buildLocationIndex(data, dept);
@@ -92,10 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             const simpleData = data[dept] || {};
             searchIndex = Object.keys(simpleData).map(key => ({
-                city: key,
-                ...simpleData[key],
-                type: dept,
-                key: toLower(key)
+                city: key, ...simpleData[key], type: dept, key: toLower(key)
             }));
             toggleSearch(false);
             updateCityList(searchIndex);
@@ -112,13 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cityEl.innerHTML = (items || []).map(item =>
             `<option value="${item.key}">${item.city}${item.country ? `, ${item.country}` : ''}${item.iata ? ` (${item.iata})` : ''}</option>`
         ).join('');
-
-        if (cityEl.options.length > 0) {
-            cityEl.selectedIndex = 0;
-            displaySelectedCity();
-        } else {
-            clearCard();
-        }
+        displaySelectedCity();
     }
 
     function renderSuggestions(items) {
@@ -127,10 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         suggestEl.innerHTML = items.map(item =>
-            `<div class="suggest-item" data-key="${item.key}">
-                <span>${item.city}${item.country ? `, ${item.country}` : ''}</span>
-                <span class="iata">${item.iata || ''}</span>
-            </div>`
+            `<div class="suggest-item" data-key="${item.key}"><span>${item.city}, ${item.country}</span><span class="iata">${item.iata || ''}</span></div>`
         ).join('');
         suggestEl.style.display = 'block';
     }
@@ -154,24 +136,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const phones = record.phones || (record.phone ? [record.phone] : []);
         cardPhonesEl.innerHTML = phones.map(p => `<li><a href="tel:${p}">${p}</a></li>`).join('');
         cardHoursEl.textContent = record.hours || 'N/A';
-        cardAddrEl.textContent = cleanAddress(record.address) || 'N/A';
+        cardAddrEl.textContent = record.address || 'N/A';
+        cardBadgeEl.hidden = toLower(record.status) !== 'offline';
 
-        if (toLower(record.status) === 'offline') {
-            cardBadgeEl.textContent = 'Offline';
-            cardBadgeEl.className = 'pill offline';
-            cardBadgeEl.hidden = false;
-        } else {
-            cardBadgeEl.hidden = true;
-        }
-
-        mapRowEl.hidden = true;
-        if (currentDepartment === 'Travel Shop') {
-            const placeId = record.place_id || getPlaceIdFromUrl(record.map_url);
-            if (placeId) {
-                cardMapLinkEl.href = createMapLink(placeId);
-                mapImgEl.src = record.map_img || `https://placehold.co/180x140/e6edf7/64748b?text=Map`;
-                mapRowEl.hidden = false;
-            }
+        mapContainerEl.hidden = true;
+        if (currentDepartment === 'Travel Shop' && record.place_id) {
+            mapLinkEl.href = createMapLink(record.place_id);
+            mapImgEl.src = record.map_img || `https://placehold.co/180x140/e6edf7/64748b?text=Map`;
+            mapContainerEl.hidden = false;
         }
 
         cardEl.hidden = false;
@@ -183,17 +155,15 @@ document.addEventListener('DOMContentLoaded', () => {
             previewEl.textContent = '';
             return;
         }
-
         const title = cardTitleEl.textContent.replace(/^.*—\s*/, '');
-        const dept = currentDepartment;
-        const emails = Array.from(cardEmailsEl.querySelectorAll('li a')).map(a => a.textContent).join(', ');
-        const phones = Array.from(cardPhonesEl.querySelectorAll('li a')).map(a => a.textContent).join(', ');
+        const emails = [...cardEmailsEl.querySelectorAll('a')].map(a => a.textContent).join(', ');
+        const phones = [...cardPhonesEl.querySelectorAll('a')].map(a => a.textContent).join(', ');
         const hours = cardHoursEl.textContent;
         const address = cardAddrEl.textContent;
-        const mapLink = (currentDepartment === 'Travel Shop' && cardMapLinkEl.href.startsWith('http')) ? cardMapLinkEl.href : '';
+        const mapLink = (currentDepartment === 'Travel Shop' && mapLinkEl.href.includes('google')) ? mapLinkEl.href : '';
         const note = paxNoteEl.value.trim();
 
-        let message = `Here are the official ${dept} contact details for ${title}:\n`;
+        let message = `Here are the official ${currentDepartment} contact details for ${title}:\n`;
         if (emails) message += `• Email: ${emails}\n`;
         if (phones) message += `• Phone: ${phones}\n`;
         if (address !== 'N/A') message += `• Address: ${address}\n`;
@@ -201,84 +171,136 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mapLink) message += `• Map: ${mapLink}\n`;
         if (note) message += `\nNote: ${note}\n`;
         message += `\n${BRAND_SIGNATURE}`;
-
         previewEl.textContent = message;
     }
 
-    function handleSearchInput() {
-        const query = toLower(searchEl.value);
-        if (!query) {
-            renderSuggestions([]);
-            updateCityList(searchIndex);
-            return;
-        }
-        const filtered = searchIndex.filter(item =>
-            toLower(item.city).includes(query) ||
-            toLower(item.country).includes(query) ||
-            toLower(item.iata).includes(query)
-        );
-        renderSuggestions(filtered.slice(0, 10));
-        updateCityList(filtered);
-    }
-
-    async function handleSendEmail() {
-        if (hpEl.value) return;
-        const to = paxEmailEl.value.trim();
-        if (!to.includes('@')) {
-            statusEl.textContent = 'Please enter a valid passenger email.';
-            return;
-        }
-        statusEl.textContent = 'Sending email...';
+    // Fixed sendEmail function that handles both 'ok' and 'success' formats
+    async function sendEmail(toEmail, subject, messageText) {
         try {
-            const messageText = previewEl.textContent;
-            const response = await fetch(API_URL, {
+            console.log("Sending email to:", toEmail);
+            console.log("Subject:", subject);
+            console.log("Message length:", messageText.length);
+            console.log("API URL:", API_URL);
+            
+            const res = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     type: 'email',
-                    sendTo: to,
-                    subject: `flydubai Contact Details: ${currentDepartment}`,
+                    sendTo: toEmail,
+                    subject,
                     text: messageText,
                     html: messageText.replace(/\n/g, '<br>')
                 })
             });
-            const result = await response.json();
-            if (!response.ok || !result.success) throw new Error(result.error || 'Unknown error');
-            statusEl.textContent = 'Email sent successfully!';
+            
+            console.log("Response status:", res.status);
+            const responseText = await res.text();
+            console.log("Response text:", responseText);
+            
+            let j;
+            try {
+                j = JSON.parse(responseText);
+            } catch (parseError) {
+                console.error("Failed to parse JSON:", parseError);
+                throw new Error(`Invalid JSON response: ${responseText}`);
+            }
+            
+            console.log("Parsed response:", j);
+            
+            // Handle both 'ok' and 'success' formats for backward compatibility
+            const isSuccess = j.success === true || j.ok === true;
+            if (!res.ok || !isSuccess) {
+                throw new Error(j.error || `HTTP ${res.status}: ${responseText}`);
+            }
+            
+            return j;
+        } catch (error) {
+            console.error("Email send error:", error);
+            throw error;
+        }
+    }
+
+    // Fixed sendApiRequest function
+    async function sendApiRequest(type, recipient) {
+        statusEl.textContent = `Sending ${type}...`;
+        try {
+            const messageText = previewEl.textContent;
+            
+            if (type === 'email') {
+                const subject = `flydubai Contact Details: ${currentDepartment}`;
+                await sendEmail(recipient, subject, messageText);
+                statusEl.textContent = 'Email sent successfully!';
+            } else if (type === 'whatsapp') {
+                const payload = {
+                    type: type,
+                    sendTo: recipient,
+                    text: messageText
+                };
+                
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json().catch(() => ({ success: false, error: 'Invalid response from server.' }));
+                if (!response.ok || !result.success) throw new Error(result.error || 'Unknown API error');
+                statusEl.textContent = 'WhatsApp sent successfully!';
+            } else {
+                throw new Error(`Unknown type: ${type}`);
+            }
         } catch (err) {
-            statusEl.textContent = `Failed to send email: ${err.message}`;
+            statusEl.textContent = `Failed to send ${type}: ${err.message}`;
         }
     }
 
     function initialize() {
         deptEl.innerHTML = Object.keys(departmentRegistry).map(dept => `<option value="${dept}">${dept}</option>`).join('');
-
         deptEl.addEventListener('change', () => selectDepartment(deptEl.value));
-        searchEl.addEventListener('input', handleSearchInput);
+        searchEl.addEventListener('input', () => {
+            const filtered = searchIndex.filter(item =>
+                toLower(item.city).includes(toLower(searchEl.value)) ||
+                toLower(item.country).includes(toLower(searchEl.value)) ||
+                toLower(item.iata).includes(toLower(searchEl.value))
+            );
+            renderSuggestions(filtered);
+            updateCityList(filtered);
+        });
         cityEl.addEventListener('change', displaySelectedCity);
-
         suggestEl.addEventListener('click', (e) => {
             const itemEl = e.target.closest('.suggest-item');
             if (!itemEl) return;
-            const key = itemEl.dataset.key;
-            cityEl.value = key;
+            cityEl.value = itemEl.dataset.key;
             searchEl.value = cityEl.options[cityEl.selectedIndex].text.split(',')[0].trim();
             suggestEl.style.display = 'none';
             displaySelectedCity();
         });
-
         [paxEmailEl, paxPhoneEl, paxNoteEl].forEach(el => el.addEventListener('input', updateMessagePreview));
-
-        copyBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText(previewEl.textContent)
-                .then(() => {
-                    statusEl.textContent = 'Copied to clipboard!';
-                    setTimeout(() => statusEl.textContent = '', 2000);
-                })
-                .catch(() => statusEl.textContent = 'Copy failed.');
+        copyBtn.addEventListener('click', () => navigator.clipboard.writeText(previewEl.textContent).then(() => statusEl.textContent = 'Copied!', () => statusEl.textContent = 'Copy failed.'));
+        
+        sendEmailBtn.addEventListener('click', () => {
+            // Anti-spam protection
+            if (hpEl && hpEl.value) {
+                statusEl.textContent = 'Blocked by anti-spam.';
+                return;
+            }
+            
+            const email = paxEmailEl.value.trim();
+            if (email.includes('@')) {
+                sendApiRequest('email', email);
+            } else {
+                statusEl.textContent = 'Please enter a valid passenger email.';
+            }
         });
 
-        sendEmailBtn.addEventListener('click', handleSendEmail);
+        sendWhatsappBtn.addEventListener('click', () => {
+            const phone = (paxPhoneEl.value.match(/\d/g) || []).join('');
+            if (phone.length > 9) {
+                sendApiRequest('whatsapp', phone);
+            } else {
+                statusEl.textContent = 'Please enter a valid WhatsApp number (e.g., 971501234567).';
+            }
+        });
 
         openWABtn.addEventListener('click', (e) => {
             const phone = (paxPhoneEl.value.match(/\d/g) || []).join('');
@@ -287,16 +309,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 statusEl.textContent = 'Please enter a passenger WhatsApp number.';
                 return;
             }
-            const text = encodeURIComponent(previewEl.textContent);
-            openWABtn.href = `https://wa.me/${phone}?text=${text}`;
+            openWABtn.href = `https://wa.me/${phone}?text=${encodeURIComponent(previewEl.textContent)}`;
         });
-
         document.addEventListener('click', (e) => {
-            if (!searchEl.contains(e.target) && !suggestEl.contains(e.target)) {
+            if (!suggestEl.contains(e.target) && !searchEl.contains(e.target)) {
                 suggestEl.style.display = 'none';
             }
         });
-
         selectDepartment(deptEl.value);
     }
 

@@ -17,92 +17,84 @@
     <section class="card">
       <div class="grid grid-3">
         <div class="field">
-          <label for="dept">Department</label>
-          <select id="dept" class="select"></select>
+          <label for="dept-select">Department</label>
+          <select id="dept-select" class="select"></select>
         </div>
         <div class="field suggest-wrap">
-          <label for="search">Search City / Country / IATA</label>
-          <input id="search" class="input" type="text" placeholder="Type city, country or IATA" autocomplete="off" />
-          <div id="suggest" class="suggest"></div>
+          <label for="search-input">Search City / Country / IATA</label>
+          <input id="search-input" class="input" type="text" placeholder="Type city, country or IATA" autocomplete="off" />
+          <div id="suggestions-container" class="suggest"></div>
         </div>
         <div class="field">
-          <label for="city">City / Station</label>
-          <select id="city" class="select"></select>
+          <label for="city-select">City / Station</label>
+          <select id="city-select" class="select"></select>
         </div>
       </div>
+    </section>
 
-      <div id="contactCard" class="card contact-card" hidden>
-        <div class="contact-card__head">
-          <h2 id="cardTitle" class="contact-card__title"></h2>
-          <span id="statusPill" class="pill" hidden></span>
-        </div>
-
-        <div class="card-cols">
-          <div>
-            <div class="group">
-              <div class="label">Emails</div>
-              <ul id="emails" class="list"></ul>
-            </div>
-            <div class="group">
-              <div class="label">Phones</div>
-              <ul id="phones" class="list"></ul>
-            </div>
-            <div class="group">
-              <div class="label">Hours</div>
-              <div id="hours" class="text"></div>
-            </div>
+    <section id="contact-card" class="card contact-card" hidden>
+      <div class="contact-card__head">
+        <h2 id="card-title" class="contact-card__title"></h2>
+        <span id="card-badge" class="pill offline" hidden>Offline</span>
+      </div>
+      <div class="card-cols">
+        <div>
+          <div class="group">
+            <div class="label">Emails</div>
+            <ul id="card-emails" class="list"></ul>
           </div>
-
-          <div>
-            <div class="group">
-              <div class="label">Address</div>
-              <div id="address" class="text"></div>
-              <div id="mapRow" class="mapRow" hidden>
-                <img id="mapImg" class="map-img" alt="Map" />
-                <a id="mapLink" class="map-link" target="_blank" rel="noopener">See map</a>
-              </div>
-            </div>
+          <div class="group">
+            <div class="label">Phones</div>
+            <ul id="card-phones" class="list"></ul>
+          </div>
+          <div class="group">
+            <div class="label">Hours</div>
+            <div id="card-hours" class="text"></div>
+          </div>
+        </div>
+        <div>
+          <div class="group">
+            <div class="label">Address</div>
+            <div id="card-address" class="text"></div>
+          </div>
+          <div id="map-container" class="mapRow" hidden>
+            <img id="map-image" class="map-img" alt="Map Preview" />
+            <a id="map-link" class="map-link" target="_blank" rel="noopener">See map</a>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="grid grid-2 maintain-space">
+    <section class="card">
+      <div class="grid grid-2">
         <div class="field">
-          <label for="paxEmail">Passenger Email</label>
-          <input id="paxEmail" class="input" type="email" placeholder="passenger@example.com" />
+          <label for="pax-email">Passenger Email</label>
+          <input id="pax-email" class="input" type="email" placeholder="passenger@example.com" />
         </div>
         <div class="field">
-          <label for="paxPhone">Passenger WhatsApp (E.164)</label>
-          <input id="paxPhone" class="input" placeholder="+9715XXXXXXXX" />
+          <label for="pax-phone">Passenger WhatsApp (E.164)</label>
+          <input id="pax-phone" class="input" placeholder="+9715XXXXXXXX" />
         </div>
       </div>
-
       <div class="field maintain-space">
-        <label for="note">Optional note to include</label>
-        <textarea id="note" class="textarea" placeholder="Any extra info to include (optional)"></textarea>
-        <input id="company" class="hp" type="text" autocomplete="off" tabindex="-1" aria-hidden="true" />
+        <label for="pax-note">Optional note to include</label>
+        <textarea id="pax-note" class="textarea" placeholder="Any extra info to include (optional)"></textarea>
       </div>
-
       <div class="field maintain-space">
         <label>Preview of the message:</label>
-        <div id="previewCard" class="card">
-          <pre id="preview" class="pre"></pre>
+        <div class="card">
+          <pre id="message-preview" class="pre"></pre>
         </div>
       </div>
-
       <div class="actions">
         <div class="button-group">
-          <button id="sendEmail" class="btn btn-blue">Send Email</button>
-          <button id="sendWABiz" class="btn btn-green">Send WhatsApp (Business API)</button>
-          <a id="openWA" class="btn btn-orange" target="_blank" rel="noopener">Open WhatsApp (Click-to-Chat)</a>
-          <button id="copyMsg" class="btn btn-purple">Copy Message</button>
+          <button id="send-email-btn" class="btn btn-blue">Send Email</button>
+          <button id="send-whatsapp-btn" class="btn btn-green">Send WhatsApp (Business API)</button>
+          <a id="open-whatsapp-btn" class="btn btn-orange" target="_blank" rel="noopener">Open WhatsApp (Click-to-Chat)</a>
+          <button id="copy-message-btn" class="btn btn-purple">Copy Message</button>
         </div>
-        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <p id="status-message" class="status" role="status" aria-live="polite"></p>
       </div>
-
-      <footer class="muted small">
-        Emails are sent from <code>no-reply@yourdomain.com</code> (via SendGrid). WhatsApp Business API sends from your business number; the Click-to-Chat button opens a pre-filled chat.
-      </footer>
     </section>
   </main>
 

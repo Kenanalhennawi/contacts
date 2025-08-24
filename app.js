@@ -1,307 +1,303 @@
-/* Data sources */
-const FILES = {
-  cargo: 'cargo.json',
-  travelShop: 'travel_shops.json',
-  contacts: 'contacts.json'
-};
+document.addEventListener('DOMContentLoaded', () => {
+    const cfg = window.CONFIG || {};
+    const API_URL = cfg.WORKER_URL || 'https://kenan.kenan-alhennawi.workers.dev';
+    const BRAND_SIGNATURE = cfg.BRAND_SIGNATURE || '— Flydubai Contact Centre';
 
-/* DOM refs */
-const $dept   = document.getElementById('department');
-const $search = document.getElementById('search');
-const $suggest= document.getElementById('suggest');
-const $city   = document.getElementById('city');
+    const getEl = (id) => document.getElementById(id);
+    const deptEl = getEl('dept');
+    const searchEl = getEl('search');
+    const suggestEl = getEl('suggest');
+    const cityEl = getEl('city');
+    const cardEl = getEl('contactCard');
+    const cardTitleEl = getEl('cardTitle');
+    const cardBadgeEl = getEl('statusPill');
+    const cardEmailsEl = getEl('emails');
+    const cardPhonesEl = getEl('phones');
+    const cardHoursEl = getEl('hours');
+    const cardAddrEl = getEl('address');
+    const cardMapLinkEl = getEl('mapLink');
+    const mapImgEl = getEl('mapImg');
+    const mapRowEl = getEl('mapRow');
+    const paxEmailEl = getEl('paxEmail');
+    const paxPhoneEl = getEl('paxPhone');
+    const paxNoteEl = getEl('note');
+    const previewEl = getEl('preview');
+    const sendEmailBtn = getEl('sendEmail');
+    const openWABtn = getEl('openWA');
+    const copyBtn = getEl('copyMsg');
+    const statusEl = getEl('status');
+    const hpEl = getEl('company');
 
-const $cardTitle = document.getElementById('cardTitle');
-const $statusPill= document.getElementById('statusPill');
+    let dataCache = {};
+    let searchIndex = [];
+    let currentDepartment = '';
 
-const $emailsBlock = document.getElementById('emailsBlock');
-const $emailsList  = document.getElementById('emailsList');
+    const departmentRegistry = {
+        'Cargo': { url: 'cargo.json', kind: 'location' },
+        'Travel Shop': { url: 'travel_shops.json', kind: 'location' },
+        'GDS Support': { url: 'contacts.json', kind: 'simple' },
+        'Baggage Services': { url: 'contacts.json', kind: 'simple' },
+        'Agency Support': { url: 'contacts.json', kind: 'simple' },
+        'Let’s Talk': { url: 'contacts.json', kind: 'simple' }
+    };
 
-const $phonesBlock = document.getElementById('phonesBlock');
-const $phonesList  = document.getElementById('phonesList');
+    const toLower = (s) => String(s || '').toLowerCase();
+    const cleanAddress = (a) => String(a || '').replace(/download map/gi, '').trim();
+    const getPlaceIdFromUrl = (u) => (String(u || '').match(/query_place_id=([^&]+)/i) || [])[1] || '';
+    const createMapLink = (pid) => pid ? `https://www.google.com/maps/search/?api=1&query_place_id=${encodeURIComponent(pid)}&hl=en-US` : '';
 
-const $hoursBlock  = document.getElementById('hoursBlock');
-const $hoursVal    = document.getElementById('hoursVal');
-
-const $addressBlock= document.getElementById('addressBlock');
-const $addressVal  = document.getElementById('addressVal');
-const $mapBox      = document.getElementById('mapBox');
-const $mapImg      = document.getElementById('mapImg');
-const $mapLink     = document.getElementById('mapLink');
-
-const $note    = document.getElementById('note');
-const $preview = document.getElementById('preview');
-const $copy    = document.getElementById('copyMsg');
-const $wa      = document.getElementById('openWa');
-
-/* in-memory */
-let contacts = {};      // departments other than cargo/travel shop (your contacts.json)
-let cargo = [];         // array of cargo entries
-let shops = [];         // array of travel shop entries
-let searchIndex = [];   // unified list for suggestions + city dropdown
-
-/* helpers */
-const titleCase = s => s ? s.toLowerCase().replace(/\b\w/g,m=>m.toUpperCase()) : '';
-const norm = s => (s||'').toString().trim();
-
-function clearCard(){
-  $cardTitle.textContent = '';
-  $statusPill.hidden = true;
-  [$emailsBlock,$phonesBlock,$hoursBlock,$addressBlock].forEach(el=>{
-    el.hidden = true;
-  });
-  $emailsList.innerHTML = '';
-  $phonesList.innerHTML = '';
-  $hoursVal.textContent = '';
-  $addressVal.textContent = '';
-  $mapBox.hidden = true;
-}
-
-function setStatusPill(status){
-  if(!status){ $statusPill.hidden = true; return; }
-  const s = status.toLowerCase();
-  $statusPill.hidden = false;
-  $statusPill.textContent = s === 'offline' ? 'Offline station' : 'Online station';
-  $statusPill.className = `pill ${s === 'offline' ? 'offline':'online'}`;
-}
-
-/* build search index */
-function rebuildIndex(){
-  searchIndex = [];
-
-  // Cargo
-  cargo.forEach((v,idx)=>{
-    searchIndex.push({
-      key: `cargo_${idx}`,
-      department: 'Cargo',
-      city: norm(v.city),
-      country: norm(v.country),
-      iata: norm(v.iata),
-      status: norm(v.status),
-      data: v
-    });
-  });
-
-  // Travel Shop
-  shops.forEach((v,idx)=>{
-    searchIndex.push({
-      key: `shop_${idx}`,
-      department: 'Travel Shop',
-      city: norm(v.city),
-      country: norm(v.country),
-      iata: norm(v.iata),
-      status: norm(v.status),
-      data: v
-    });
-  });
-
-  // Other departments from contacts.json (Department → City → entry)
-  Object.keys(contacts||{}).forEach(dept=>{
-    const cities = contacts[dept]||{};
-    Object.keys(cities).forEach(city=>{
-      const v = cities[city]||{};
-      searchIndex.push({
-        key: `contact_${dept}_${city}`,
-        department: dept,
-        city: norm(city),
-        country: norm(v.country),
-        iata: norm(v.iata||''),
-        status: '',
-        data: { ...v, city, department: dept }
-      });
-    });
-  });
-
-  populateCityDropdown();
-}
-
-/* populate dropdown for current department */
-function populateCityDropdown(){
-  const dept = $dept.value;
-  const list = searchIndex
-    .filter(x => x.department === dept)
-    .sort((a,b)=>a.city.localeCompare(b.city));
-
-  $city.innerHTML = '';
-  list.forEach(x=>{
-    const opt = document.createElement('option');
-    opt.value = x.key;
-    const right = x.iata ? ` (${x.iata})` : '';
-    const country = x.country ? ` (${titleCase(x.country)})` : '';
-    opt.textContent = `${titleCase(x.city)}${country}${right}`;
-    $city.appendChild(opt);
-  });
-
-  // default selection
-  if ($city.options.length){
-    $city.selectedIndex = 0;
-    renderByKey($city.value);
-  } else {
-    clearCard();
-  }
-}
-
-/* render contact card by selected key */
-function renderByKey(key){
-  const item = searchIndex.find(x=>x.key===key);
-  if(!item){ clearCard(); return; }
-
-  const dept = item.department;
-  const v = item.data;
-
-  $cardTitle.textContent = `${dept === 'Travel Shop' ? 'flydubai Travel Shop — ' : ''}${titleCase(item.city)}${v.country ? ', '+titleCase(v.country):''}`;
-  setStatusPill(item.status);
-
-  // emails
-  const emails = (v.emails||[]).filter(Boolean);
-  if (emails.length){
-    $emailsList.innerHTML = emails.map(e=>`<li><a href="mailto:${e}">${e}</a></li>`).join('');
-    $emailsBlock.hidden = false;
-  } else {
-    $emailsBlock.hidden = true;
-  }
-
-  // phones
-  const phones = (v.phones||[]).filter(Boolean).map(p => norm(p).replace(/\s+/g,' ').trim());
-  if (phones.length){
-    $phonesList.innerHTML = phones.map(p=>`<li><a href="tel:${p.replace(/\s/g,'')}">${p}</a></li>`).join('');
-    $phonesBlock.hidden = false;
-  } else {
-    $phonesBlock.hidden = true;
-  }
-
-  // hours
-  const hours = norm(v.hours||'');
-  if (hours){
-    $hoursVal.textContent = hours;
-    $hoursBlock.hidden = false;
-  } else {
-    $hoursBlock.hidden = true;
-  }
-
-  // Address & Map — only for Cargo and Travel Shop
-  if (dept === 'Cargo' || dept === 'Travel Shop'){
-    const address = norm(v.address||'');
-    if (address){
-      $addressVal.textContent = address;
-      $addressBlock.hidden = false;
-    } else {
-      $addressBlock.hidden = true;
+    async function loadJson(url) {
+        if (dataCache[url]) return dataCache[url];
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP error status: ${response.status}`);
+            const data = await response.json();
+            dataCache[url] = data;
+            return data;
+        } catch (error) {
+            statusEl.textContent = `Error: Could not load data from ${url}.`;
+            return null;
+        }
     }
 
-    const mapUrl = norm(v.map_url||'');
-    const mapImg = norm(v.map_img||'');
-    if (mapUrl){
-      $mapLink.href = mapUrl;
-      $mapBox.hidden = false;
-      if (mapImg) $mapImg.src = mapImg; else $mapImg.removeAttribute('src');
-    } else {
-      $mapBox.hidden = true;
+    function buildLocationIndex(data, dept) {
+        if (!data || !Array.isArray(data.entries)) return [];
+        return data.entries.map(item => ({
+            ...item,
+            type: dept,
+            key: `${toLower(item.city)}|${toLower(item.country)}|${toLower(item.iata)}`
+        }));
     }
-  } else {
-    // Never show map for these
-    $addressBlock.hidden = true;
-    $mapBox.hidden = true;
-  }
 
-  updatePreview(dept, item.city, v, mapLinkVisible(dept, v.map_url));
-}
+    async function selectDepartment(dept) {
+        currentDepartment = dept;
+        const meta = departmentRegistry[dept];
+        if (!meta) return;
 
-/* Preview composer */
-function mapLinkVisible(dept, url){
-  return (dept === 'Cargo' || dept === 'Travel Shop') && !!norm(url||'');
-}
-function updatePreview(dept, city, v, includeMap){
-  const lines = [];
-  const nicePlace = `${titleCase(city)}${v.country ? ` (${titleCase(v.country)})` : ''}`;
-  lines.push(`Here are the official ${dept} contact details for ${nicePlace}:`);
-  const phones = (v.phones||[]).filter(Boolean);
-  if (phones.length) lines.push(`• Phone: ${phones.join(' / ')}`);
-  const emails = (v.emails||[]).filter(Boolean);
-  if (emails.length) lines.push(`• Email: ${emails.join(', ')}`);
-  if (v.address) lines.push(`• Address: ${v.address}`);
-  if (includeMap) lines.push(`• Map: ${v.map_url}`);
-  lines.push(`\n— Flydubai Contact Centre`);
-  $preview.value = lines.join('\n');
-}
+        statusEl.textContent = `Loading ${dept}...`;
+        clearCard();
+        searchEl.value = '';
+        renderSuggestions([]);
 
-/* Suggest (type-ahead) */
-function openSuggest(q){
-  const dept = $dept.value;
-  const s = norm(q).toLowerCase();
-  const items = searchIndex
-    .filter(x => x.department === dept)
-    .filter(x => !s || x.city.toLowerCase().includes(s) || x.country.toLowerCase().includes(s) || x.iata.toLowerCase().includes(s))
-    .slice(0,50);
+        const data = await loadJson(meta.url);
+        if (!data) {
+            statusEl.textContent = `Failed to load data for ${dept}.`;
+            return;
+        }
 
-  if (!items.length){ $suggest.classList.remove('open'); $suggest.innerHTML=''; return; }
+        if (meta.kind === 'location') {
+            searchIndex = buildLocationIndex(data, dept);
+            toggleSearch(true);
+            updateCityList(searchIndex);
+        } else {
+            const simpleData = data[dept] || {};
+            searchIndex = Object.keys(simpleData).map(key => ({
+                city: key,
+                ...simpleData[key],
+                type: dept,
+                key: toLower(key)
+            }));
+            toggleSearch(false);
+            updateCityList(searchIndex);
+        }
+        statusEl.textContent = '';
+    }
 
-  $suggest.innerHTML = items.map(x=>{
-    const iata = x.iata ? `<span class="suggest-iata">${x.iata}</span>` : '';
-    const dot  = `<span class="suggest-dot" style="background:${(x.status||'').toLowerCase()==='offline'?'#e11d48':'#14b8a6'}"></span>`;
-    return `<div class="suggest-item" data-key="${x.key}">
-      ${dot}
-      <div>${titleCase(x.city)}, ${titleCase(x.country||'')}</div>
-      ${iata}
-    </div>`;
-  }).join('');
-  $suggest.classList.add('open');
-}
+    function toggleSearch(isEnabled) {
+        searchEl.disabled = !isEnabled;
+        searchEl.parentElement.style.opacity = isEnabled ? '1' : '0.5';
+    }
 
-function closeSuggest(){ $suggest.classList.remove('open'); }
+    function updateCityList(items) {
+        cityEl.innerHTML = (items || []).map(item =>
+            `<option value="${item.key}">${item.city}${item.country ? `, ${item.country}` : ''}${item.iata ? ` (${item.iata})` : ''}</option>`
+        ).join('');
 
-/* events */
-$dept.addEventListener('change', ()=>{ $search.value=''; closeSuggest(); populateCityDropdown(); });
+        if (cityEl.options.length > 0) {
+            cityEl.selectedIndex = 0;
+            displaySelectedCity();
+        } else {
+            clearCard();
+        }
+    }
 
-$city.addEventListener('change', ()=>{ renderByKey($city.value); });
+    function renderSuggestions(items) {
+        if (!items || items.length === 0) {
+            suggestEl.style.display = 'none';
+            return;
+        }
+        suggestEl.innerHTML = items.map(item =>
+            `<div class="suggest-item" data-key="${item.key}">
+                <span>${item.city}${item.country ? `, ${item.country}` : ''}</span>
+                <span class="iata">${item.iata || ''}</span>
+            </div>`
+        ).join('');
+        suggestEl.style.display = 'block';
+    }
 
-$suggest.addEventListener('click', (e)=>{
-  const item = e.target.closest('.suggest-item');
-  if(!item) return;
-  const key = item.getAttribute('data-key');
-  const node = searchIndex.find(x=>x.key===key);
-  if (!node) return;
-  $search.value = `${titleCase(node.city)}${node.iata?` (${node.iata})`:''}`;
-  closeSuggest();
-  // also select in dropdown
-  const idx = [...$city.options].findIndex(o=>o.value===key);
-  if (idx>=0){ $city.selectedIndex = idx; }
-  renderByKey(key);
+    function clearCard() {
+        cardEl.hidden = true;
+        updateMessagePreview();
+    }
+
+    function displaySelectedCity() {
+        const selectedKey = cityEl.value;
+        const record = searchIndex.find(item => item.key === selectedKey);
+        if (!record) {
+            clearCard();
+            return;
+        }
+
+        cardTitleEl.textContent = `${record.type} — ${record.city}${record.country ? `, ${record.country}` : ''}`;
+        const emails = record.emails || (record.email ? [record.email] : []);
+        cardEmailsEl.innerHTML = emails.map(e => `<li><a href="mailto:${e}">${e}</a></li>`).join('');
+        const phones = record.phones || (record.phone ? [record.phone] : []);
+        cardPhonesEl.innerHTML = phones.map(p => `<li><a href="tel:${p}">${p}</a></li>`).join('');
+        cardHoursEl.textContent = record.hours || 'N/A';
+        cardAddrEl.textContent = cleanAddress(record.address) || 'N/A';
+
+        if (toLower(record.status) === 'offline') {
+            cardBadgeEl.textContent = 'Offline';
+            cardBadgeEl.className = 'pill offline';
+            cardBadgeEl.hidden = false;
+        } else {
+            cardBadgeEl.hidden = true;
+        }
+
+        const shouldShowMap = currentDepartment === 'Travel Shop';
+        const placeId = record.place_id || getPlaceIdFromUrl(record.map_url);
+
+        if (shouldShowMap && placeId) {
+            cardMapLinkEl.href = createMapLink(placeId);
+            mapImgEl.src = record.map_img || `https://placehold.co/180x140/e6edf7/64748b?text=Map`;
+            mapRowEl.hidden = false;
+        } else {
+            mapRowEl.hidden = true;
+        }
+
+        cardEl.hidden = false;
+        updateMessagePreview();
+    }
+
+    function updateMessagePreview() {
+        if (cardEl.hidden) {
+            previewEl.textContent = '';
+            return;
+        }
+
+        const title = cardTitleEl.textContent.replace(/^.*—\s*/, '');
+        const dept = currentDepartment;
+        const emails = Array.from(cardEmailsEl.querySelectorAll('li a')).map(a => a.textContent).join(', ');
+        const phones = Array.from(cardPhonesEl.querySelectorAll('li a')).map(a => a.textContent).join(', ');
+        const hours = cardHoursEl.textContent;
+        const address = cardAddrEl.textContent;
+        const mapLink = (currentDepartment === 'Travel Shop' && cardMapLinkEl.href.startsWith('http')) ? cardMapLinkEl.href : '';
+        const note = paxNoteEl.value.trim();
+
+        let message = `Here are the official ${dept} contact details for ${title}:\n`;
+        if (emails) message += `• Email: ${emails}\n`;
+        if (phones) message += `• Phone: ${phones}\n`;
+        if (address !== 'N/A') message += `• Address: ${address}\n`;
+        if (hours !== 'N/A') message += `• Working hours: ${hours}\n`;
+        if (mapLink) message += `• Map: ${mapLink}\n`;
+        if (note) message += `\nNote: ${note}\n`;
+        message += `\n${BRAND_SIGNATURE}`;
+
+        previewEl.textContent = message;
+    }
+
+    function handleSearchInput() {
+        const query = toLower(searchEl.value);
+        if (!query) {
+            renderSuggestions([]);
+            updateCityList(searchIndex);
+            return;
+        }
+        const filtered = searchIndex.filter(item =>
+            toLower(item.city).includes(query) ||
+            toLower(item.country).includes(query) ||
+            toLower(item.iata).includes(query)
+        );
+        renderSuggestions(filtered.slice(0, 10));
+        updateCityList(filtered);
+    }
+
+    async function handleSendEmail() {
+        if (hpEl.value) return;
+        const to = paxEmailEl.value.trim();
+        if (!to.includes('@')) {
+            statusEl.textContent = 'Please enter a valid passenger email.';
+            return;
+        }
+        statusEl.textContent = 'Sending email...';
+        try {
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    type: 'email',
+                    to: to,
+                    subject: `flydubai Contact Details: ${currentDepartment}`,
+                    message: previewEl.textContent
+                })
+            });
+            const result = await response.json();
+            if (!response.ok || !result.success) throw new Error(result.error || 'Unknown error');
+            statusEl.textContent = 'Email sent successfully!';
+        } catch (err) {
+            statusEl.textContent = `Failed to send email: ${err.message}`;
+        }
+    }
+
+    function initialize() {
+        deptEl.innerHTML = Object.keys(departmentRegistry).map(dept => `<option value="${dept}">${dept}</option>`).join('');
+
+        deptEl.addEventListener('change', () => selectDepartment(deptEl.value));
+        searchEl.addEventListener('input', handleSearchInput);
+        cityEl.addEventListener('change', displaySelectedCity);
+
+        suggestEl.addEventListener('click', (e) => {
+            const itemEl = e.target.closest('.suggest-item');
+            if (!itemEl) return;
+            const key = itemEl.dataset.key;
+            cityEl.value = key;
+            searchEl.value = cityEl.options[cityEl.selectedIndex].text.split(',')[0].trim();
+            suggestEl.style.display = 'none';
+            displaySelectedCity();
+        });
+
+        [paxEmailEl, paxPhoneEl, paxNoteEl].forEach(el => el.addEventListener('input', updateMessagePreview));
+
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(previewEl.textContent)
+                .then(() => {
+                    statusEl.textContent = 'Copied to clipboard!';
+                    setTimeout(() => statusEl.textContent = '', 2000);
+                })
+                .catch(() => statusEl.textContent = 'Copy failed.');
+        });
+
+        sendEmailBtn.addEventListener('click', handleSendEmail);
+
+        openWABtn.addEventListener('click', (e) => {
+            const phone = (paxPhoneEl.value.match(/\d/g) || []).join('');
+            if (!phone) {
+                e.preventDefault();
+                statusEl.textContent = 'Please enter a passenger WhatsApp number.';
+                return;
+            }
+            const text = encodeURIComponent(previewEl.textContent);
+            openWABtn.href = `https://wa.me/${phone}?text=${text}`;
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!searchEl.contains(e.target) && !suggestEl.contains(e.target)) {
+                suggestEl.style.display = 'none';
+            }
+        });
+
+        selectDepartment(deptEl.value);
+    }
+
+    initialize();
 });
-
-$search.addEventListener('input', e=> openSuggest(e.target.value));
-document.addEventListener('click', e=>{
-  if (!e.target.closest('.suggest-wrap')) closeSuggest();
-});
-
-/* copy + WA buttons (just utilities) */
-document.getElementById('copyMsg').addEventListener('click', ()=>{
-  $preview.select(); document.execCommand('copy');
-});
-
-document.getElementById('openWa').addEventListener('click', ()=>{
-  const txt = encodeURIComponent($preview.value);
-  window.open('https://wa.me/?text='+txt, '_blank');
-});
-
-/* loader */
-(async function init(){
-  // parallel fetch
-  const [cargoRes, shopRes, contactsRes] = await Promise.all([
-    fetch(FILES.cargo).then(r=>r.json()),
-    fetch(FILES.travelShop).then(r=>r.json()),
-    fetch(FILES.contacts).then(r=>r.json())
-  ]);
-
-  cargo = Array.isArray(cargoRes.entries) ? cargoRes.entries : (cargoRes.entries ? [] : []);
-  shops = Array.isArray(shopRes.entries) ? shopRes.entries : (shopRes.entries ? [] : []);
-  contacts = contactsRes || {};
-
-  // Important: strip any “Download map” remnants & ensure google map url only
-  shops = shops.map(x=>{
-    const cleanAddress = norm((x.address||'').replace(/Download map/ig,'').trim());
-    return { ...x, address: cleanAddress };
-  });
-
-  rebuildIndex();
-})();

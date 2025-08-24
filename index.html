@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Share Department Contact with Passenger</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Share Department Contact with Passenger</h1>
+    <p>Select department and city, then send the official contact to the passenger via email and/or WhatsApp.</p>
+  </header>
+
+  <main class="card">
+    <div class="grid grid-3">
+      <div class="field">
+        <label for="department">Department</label>
+        <select id="department" class="select">
+          <option value="Cargo">Cargo</option>
+          <option value="Travel Shop">Travel Shop</option>
+          <option value="GDS Support">GDS Support</option>
+          <option value="Baggage Services">Baggage Services</option>
+          <option value="Agency Support">Agency Support</option>
+          <option value="Let’s Talk">Let’s Talk</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="search">Search City / Country / IATA</label>
+        <div class="suggest-wrap">
+          <input id="search" class="input" type="text" placeholder="Type city, country or IATA" autocomplete="off" />
+          <div id="suggest" class="suggest"></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="city">City / Station</label>
+        <select id="city" class="select"></select>
+      </div>
+    </div>
+
+    <section id="contactCard" class="contact-card">
+      <header class="contact-card__head">
+        <h2 id="cardTitle" class="contact-card__title"></h2>
+        <span id="statusPill" class="pill" hidden></span>
+      </header>
+
+      <div class="grid grid-3-2">
+        <div class="col">
+          <div id="emailsBlock" class="kv" hidden>
+            <div class="kv__k">Emails</div>
+            <ul id="emailsList" class="list"></ul>
+          </div>
+
+          <div id="phonesBlock" class="kv" hidden>
+            <div class="kv__k">Phones</div>
+            <ul id="phonesList" class="list"></ul>
+          </div>
+
+          <div id="hoursBlock" class="kv" hidden>
+            <div class="kv__k">Hours</div>
+            <div id="hoursVal" class="kv__v"></div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div id="addressBlock" class="kv" hidden>
+            <div class="kv__k">Address</div>
+            <div id="addressVal" class="kv__v"></div>
+
+            <div id="mapBox" class="map-box" hidden>
+              <img id="mapImg" class="map-img" alt="Map" />
+              <a id="mapLink" class="map-link" target="_blank" rel="noopener">See map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid grid-2">
+      <div class="field">
+        <label for="paxEmail">Passenger Email</label>
+        <input id="paxEmail" class="input" type="email" placeholder="passenger@example.com" />
+      </div>
+
+      <div class="field">
+        <label for="paxWa">Passenger WhatsApp (E.164)</label>
+        <input id="paxWa" class="input" type="tel" placeholder="+9715XXXXXXXX" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="note">Optional note to include</label>
+      <textarea id="note" class="textarea" placeholder="Any extra info to include (optional)"></textarea>
+    </div>
+
+    <div class="field">
+      <label>Preview of the message:</label>
+      <textarea id="preview" class="textarea preview" readonly></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="sendEmail" class="btn btn-primary">Send Email</button>
+      <button id="openWa" class="btn btn-accent">Open WhatsApp (Click-to-Chat)</button>
+      <button id="copyMsg" class="btn">Copy Message</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -2,111 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Share Department Contact with Passenger</title>
+  <meta name="color-scheme" content="light" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="app-header">
-    <h1>Share Department Contact with Passenger</h1>
-    <p>Select department and city, then send the official contact to the passenger via email and/or WhatsApp.</p>
-  </header>
+  <main class="wrap">
+    <header class="top">
+      <h1>Share Department Contact with Passenger</h1>
+      <p>Select department and city, then send the official contact to the passenger via email and/or WhatsApp.</p>
+    </header>
 
-  <main class="card">
-    <div class="grid grid-3">
-      <div class="field">
-        <label for="department">Department</label>
-        <select id="department" class="select">
-          <option value="Cargo">Cargo</option>
-          <option value="Travel Shop">Travel Shop</option>
-          <option value="GDS Support">GDS Support</option>
-          <option value="Baggage Services">Baggage Services</option>
-          <option value="Agency Support">Agency Support</option>
-          <option value="Let’s Talk">Let’s Talk</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="search">Search City / Country / IATA</label>
-        <div class="suggest-wrap">
+    <section class="card">
+      <div class="grid grid-3">
+        <div class="field">
+          <label for="dept">Department</label>
+          <select id="dept" class="select"></select>
+        </div>
+        <div class="field suggest-wrap">
+          <label for="search">Search City / Country / IATA</label>
           <input id="search" class="input" type="text" placeholder="Type city, country or IATA" autocomplete="off" />
           <div id="suggest" class="suggest"></div>
         </div>
+        <div class="field">
+          <label for="city">City / Station</label>
+          <select id="city" class="select"></select>
+        </div>
       </div>
 
-      <div class="field">
-        <label for="city">City / Station</label>
-        <select id="city" class="select"></select>
-      </div>
-    </div>
-
-    <section id="contactCard" class="contact-card">
-      <header class="contact-card__head">
-        <h2 id="cardTitle" class="contact-card__title"></h2>
-        <span id="statusPill" class="pill" hidden></span>
-      </header>
-
-      <div class="grid grid-3-2">
-        <div class="col">
-          <div id="emailsBlock" class="kv" hidden>
-            <div class="kv__k">Emails</div>
-            <ul id="emailsList" class="list"></ul>
-          </div>
-
-          <div id="phonesBlock" class="kv" hidden>
-            <div class="kv__k">Phones</div>
-            <ul id="phonesList" class="list"></ul>
-          </div>
-
-          <div id="hoursBlock" class="kv" hidden>
-            <div class="kv__k">Hours</div>
-            <div id="hoursVal" class="kv__v"></div>
-          </div>
+      <div id="contactCard" class="card contact-card" hidden>
+        <div class="contact-card__head">
+          <h2 id="cardTitle" class="contact-card__title"></h2>
+          <span id="statusPill" class="pill" hidden></span>
         </div>
 
-        <div class="col">
-          <div id="addressBlock" class="kv" hidden>
-            <div class="kv__k">Address</div>
-            <div id="addressVal" class="kv__v"></div>
+        <div class="card-cols">
+          <div>
+            <div class="group">
+              <div class="label">Emails</div>
+              <ul id="emails" class="list"></ul>
+            </div>
+            <div class="group">
+              <div class="label">Phones</div>
+              <ul id="phones" class="list"></ul>
+            </div>
+            <div class="group">
+              <div class="label">Hours</div>
+              <div id="hours" class="text"></div>
+            </div>
+          </div>
 
-            <div id="mapBox" class="map-box" hidden>
-              <img id="mapImg" class="map-img" alt="Map" />
-              <a id="mapLink" class="map-link" target="_blank" rel="noopener">See map</a>
+          <div>
+            <div class="group">
+              <div class="label">Address</div>
+              <div id="address" class="text"></div>
+              <div id="mapRow" class="mapRow" hidden>
+                <img id="mapImg" class="map-img" alt="Map" />
+                <a id="mapLink" class="map-link" target="_blank" rel="noopener">See map</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="grid grid-2 maintain-space">
+        <div class="field">
+          <label for="paxEmail">Passenger Email</label>
+          <input id="paxEmail" class="input" type="email" placeholder="passenger@example.com" />
+        </div>
+        <div class="field">
+          <label for="paxPhone">Passenger WhatsApp (E.164)</label>
+          <input id="paxPhone" class="input" placeholder="+9715XXXXXXXX" />
+        </div>
+      </div>
+
+      <div class="field maintain-space">
+        <label for="note">Optional note to include</label>
+        <textarea id="note" class="textarea" placeholder="Any extra info to include (optional)"></textarea>
+        <input id="company" class="hp" type="text" autocomplete="off" tabindex="-1" aria-hidden="true" />
+      </div>
+
+      <div class="field maintain-space">
+        <label>Preview of the message:</label>
+        <div id="previewCard" class="card">
+          <pre id="preview" class="pre"></pre>
+        </div>
+      </div>
+
+      <div class="actions">
+        <div class="button-group">
+          <button id="sendEmail" class="btn btn-blue">Send Email</button>
+          <button id="sendWABiz" class="btn btn-green">Send WhatsApp (Business API)</button>
+          <a id="openWA" class="btn btn-orange" target="_blank" rel="noopener">Open WhatsApp (Click-to-Chat)</a>
+          <button id="copyMsg" class="btn btn-purple">Copy Message</button>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </div>
+
+      <footer class="muted small">
+        Emails are sent from <code>no-reply@yourdomain.com</code> (via SendGrid). WhatsApp Business API sends from your business number; the Click-to-Chat button opens a pre-filled chat.
+      </footer>
     </section>
-
-    <div class="grid grid-2">
-      <div class="field">
-        <label for="paxEmail">Passenger Email</label>
-        <input id="paxEmail" class="input" type="email" placeholder="passenger@example.com" />
-      </div>
-
-      <div class="field">
-        <label for="paxWa">Passenger WhatsApp (E.164)</label>
-        <input id="paxWa" class="input" type="tel" placeholder="+9715XXXXXXXX" />
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="note">Optional note to include</label>
-      <textarea id="note" class="textarea" placeholder="Any extra info to include (optional)"></textarea>
-    </div>
-
-    <div class="field">
-      <label>Preview of the message:</label>
-      <textarea id="preview" class="textarea preview" readonly></textarea>
-    </div>
-
-    <div class="actions">
-      <button id="sendEmail" class="btn btn-primary">Send Email</button>
-      <button id="openWa" class="btn btn-accent">Open WhatsApp (Click-to-Chat)</button>
-      <button id="copyMsg" class="btn">Copy Message</button>
-    </div>
   </main>
 
-  <script src="app.js"></script>
+  <script>
+    window.CONFIG = {
+      WORKER_URL: 'https://kenan.kenan-alhennawi.workers.dev',
+      BRAND_SIGNATURE: '— Flydubai Contact Centre'
+    };
+  </script>
+  <script src="app.js" defer></script>
 </body>
 </html>

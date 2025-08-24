@@ -164,15 +164,14 @@ document.addEventListener('DOMContentLoaded', () => {
             cardBadgeEl.hidden = true;
         }
 
-        const shouldShowMap = currentDepartment === 'Travel Shop';
-        const placeId = record.place_id || getPlaceIdFromUrl(record.map_url);
-
-        if (shouldShowMap && placeId) {
-            cardMapLinkEl.href = createMapLink(placeId);
-            mapImgEl.src = record.map_img || `https://placehold.co/180x140/e6edf7/64748b?text=Map`;
-            mapRowEl.hidden = false;
-        } else {
-            mapRowEl.hidden = true;
+        mapRowEl.hidden = true;
+        if (currentDepartment === 'Travel Shop') {
+            const placeId = record.place_id || getPlaceIdFromUrl(record.map_url);
+            if (placeId) {
+                cardMapLinkEl.href = createMapLink(placeId);
+                mapImgEl.src = record.map_img || `https://placehold.co/180x140/e6edf7/64748b?text=Map`;
+                mapRowEl.hidden = false;
+            }
         }
 
         cardEl.hidden = false;
@@ -231,14 +230,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         statusEl.textContent = 'Sending email...';
         try {
+            const messageText = previewEl.textContent;
             const response = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     type: 'email',
-                    to: to,
+                    sendTo: to,
                     subject: `flydubai Contact Details: ${currentDepartment}`,
-                    message: previewEl.textContent
+                    text: messageText,
+                    html: messageText.replace(/\n/g, '<br>')
                 })
             });
             const result = await response.json();

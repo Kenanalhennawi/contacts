@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const toLower = (s) => String(s || '').toLowerCase();
-    const createMapLink = (pid) => pid ? `https://www.google.com/maps/search/?api=1&query_place_id=${encodeURIComponent(pid)}&hl=en-US` : '';
+    // FIXED: Updated createMapLink to match the format in travel_shops.json
+    const createMapLink = (pid) => pid ? `https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=${encodeURIComponent(pid)}&hl=en-US` : '';
 
     async function loadJson(url) {
         if (dataCache[url]) return dataCache[url];
@@ -141,6 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         mapContainerEl.hidden = true;
         if (currentDepartment === 'Travel Shop' && record.place_id) {
+            // FIXED: Use the createMapLink function to generate the correct map URL
             mapLinkEl.href = createMapLink(record.place_id);
             mapImgEl.src = record.map_img || `https://placehold.co/180x140/e6edf7/64748b?text=Map`;
             mapContainerEl.hidden = false;
@@ -261,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const filtered = searchIndex.filter(item =>
                 toLower(item.city).includes(toLower(searchEl.value)) ||
                 toLower(item.country).includes(toLower(searchEl.value)) ||
-                toLower(item.iata).includes(toLower(searchEl.value))
+                (item.iata && toLower(item.iata).includes(toLower(searchEl.value)))
             );
             renderSuggestions(filtered);
             updateCityList(filtered);
@@ -276,7 +278,11 @@ document.addEventListener('DOMContentLoaded', () => {
             displaySelectedCity();
         });
         [paxEmailEl, paxPhoneEl, paxNoteEl].forEach(el => el.addEventListener('input', updateMessagePreview));
-        copyBtn.addEventListener('click', () => navigator.clipboard.writeText(previewEl.textContent).then(() => statusEl.textContent = 'Copied!', () => statusEl.textContent = 'Copy failed.'));
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(previewEl.textContent)
+                .then(() => statusEl.textContent = 'Copied!')
+                .catch(() => statusEl.textContent = 'Copy failed.');
+        });
         
         sendEmailBtn.addEventListener('click', () => {
             // Anti-spam protection

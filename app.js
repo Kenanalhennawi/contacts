@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cardBadgeEl.hidden = toLower(record.status) !== 'offline';
 
         mapContainerEl.hidden = true;
-        if (currentDepartment === 'Travel Shop' && record.place_id) {
-            // FIXED: Use the createMapLink function to generate the correct map URL
+        // FIXED: Only show map if place_id exists and is not empty
+        if (currentDepartment === 'Travel Shop' && record.place_id && record.place_id.trim() !== '') {
             mapLinkEl.href = createMapLink(record.place_id);
             mapImgEl.src = record.map_img || `https://placehold.co/180x140/e6edf7/64748b?text=Map`;
             mapContainerEl.hidden = false;

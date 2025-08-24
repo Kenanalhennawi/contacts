@@ -77,16 +77,15 @@
     },
     {
       "city": "Almaty",
-      "country": "Kazakhstan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
-        "+7 727 225 54 32",
-        "8 800 070 28 33"
+        "+7 727 225 54 32"
       ],
       "hours": "",
       "status": "",
-      "address": "Samal 2, building 32\nOffice 3\nAlmaty 050000, Kazakhstan",
+      "address": "Samal 2, building 32\nOffice 3\nAlmaty 050000, Kazakhstan\n\n8 800 070 28 33 (toll free in Kazakhstan)",
       "place_id": "ChIJaYKJRANvgzgROVeM4Oj5dmc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJaYKJRANvgzgROVeM4Oj5dmc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -108,7 +107,7 @@
     },
     {
       "city": "Ankara",
-      "country": "Turkey",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -116,14 +115,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Istanbul.",
+      "address": "Please contact our Travel Shop in Istanbul.\n\nAtaköy 2-5-6.Kısım Rauf Orbay Cd.\nYalıataköy Sitesi C Blok Kat:2 No:23\nBakırköy-Ataköy / İstanbul, 34158\nİstanbul, Türkiye\n\nhttp://www.ryldubai.com/",
       "place_id": "ChIJRYss1vO9yhQR9OPDAJTzqVE",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJRYss1vO9yhQR9OPDAJTzqVE&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Antalya",
-      "country": "Turkey",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -131,7 +130,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Istanbul.",
+      "address": "Please contact our Travel Shop in Istanbul.\n\nAtaköy 2-5-6.Kısım Rauf Orbay Cd.\nYalıataköy Sitesi C Blok Kat:2 No:23\nBakırköy-Ataköy / İstanbul, 34158\nİstanbul, Türkiye\n\nhttp://www.ryldubai.com/",
       "place_id": "ChIJRYss1vO9yhQR9OPDAJTzqVE",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJRYss1vO9yhQR9OPDAJTzqVE&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -153,23 +152,22 @@
     },
     {
       "city": "Astana",
-      "country": "Kazakhstan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
-        "+7 727 225 54 32",
-        "8 800 070 28 33"
+        "+7 727 225 54 32"
       ],
       "hours": "",
       "status": "",
-      "address": "Kunaev str 12/1\nAstana 010000, Kazakhstan",
+      "address": "Kunaev str 12/1\nAstana 010000, Kazakhstan\n\n8 800 070 28 33 (toll free in Kazakhstan)",
       "place_id": "ChIJk_i9pKCGRUIRNJVi0bOmCOg",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJk_i9pKCGRUIRNJVi0bOmCOg&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Baghdad",
-      "country": "Iraq",
+      "country": "please call on the provided numbers.",
       "iata": "",
       "emails": [],
       "phones": [
@@ -178,13 +176,13 @@
       "hours": "",
       "status": "",
       "address": "For assistance, please call on the provided numbers.",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "place_id": "ChIJk_i9pKCGRUIRNJVi0bOmCOg",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJk_i9pKCGRUIRNJVi0bOmCOg&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Bahrain",
-      "country": "Bahrain",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -222,7 +220,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -237,32 +235,29 @@
       ],
       "hours": "",
       "status": "",
-      "address": "14th Floor, Charn Issara Tower II\n2922/215 New Petchburi Road\nBangkapi, Huaykwang\nBangkok 10310, Thailand",
+      "address": "14th Floor, Charn Issara Tower II\n2922/215 New Petchburi Road\nBangkapi, Huaykwang\nBangkok 10310, Thailand",
       "place_id": "ChIJiRyWf0We4jARFX28u-qTRGs",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJiRyWf0We4jARFX28u-qTRGs&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Basel",
-      "country": "Switzerland",
+      "country": "",
       "iata": "",
-      "emails": [
-        "flydubai.switzerland@aviareps.com",
-        "flydubai.salesch@aviareps.com"
-      ],
+      "emails": [],
       "phones": [
         "+41 44 286 99 41"
       ],
       "hours": "",
       "status": "",
-      "address": "For reservations and ticketing please email: flydubai.switzerland@aviareps.com. For sales and marketing please email: flydubai.salesch@aviareps.com",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "For reservations and ticketing: \n\nflydubai.switzerland@aviareps.com\n\nFor sales and marketing:\n\nflydubai.salesch@aviareps.com",
+      "place_id": "ChIJiRyWf0We4jARFX28u-qTRGs",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJiRyWf0We4jARFX28u-qTRGs&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Basra",
-      "country": "Iraq",
+      "country": "please call on the provided numbers.",
       "iata": "",
       "emails": [],
       "phones": [
@@ -271,9 +266,9 @@
       "hours": "",
       "status": "",
       "address": "For assistance, please call on the provided numbers.",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "place_id": "ChIJiRyWf0We4jARFX28u-qTRGs",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJiRyWf0We4jARFX28u-qTRGs&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Beirut",
@@ -307,15 +302,15 @@
     },
     {
       "city": "Bengaluru",
-      "country": "India",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
         "+91 40 40276592"
       ],
-      "hours": "Monday-Saturday 10:00-13:30, 14:00-18:00",
+      "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Hyderabad.",
+      "address": "Please contact our Travel Shop in Hyderabad\n\nD.NO.3-6-524\nZee Plaza\n2nd floor, flat no. 203\nStreet no. 7\nOpposite to Minerva Hotel Himayathnagar\nHyderabad-500029, India\n\nWorking hours:\nMonday-Saturday\n10:00-13:30\n14:00-18:00\nClosed on Sunday and public holidays",
       "place_id": "ChIJk6kaIN2ZyzsRi07MSEpGOu0",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJk6kaIN2ZyzsRi07MSEpGOu0&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -337,7 +332,7 @@
     },
     {
       "city": "Bodrum",
-      "country": "Turkey",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -345,29 +340,27 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Istanbul.",
+      "address": "Please contact our Travel Shop in Istanbul.\n\nAtaköy 2-5-6.Kısım Rauf Orbay Cd.\nYalıataköy Sitesi C Blok Kat:2 No:23\nBakırköy-Ataköy / İstanbul, 34158\nİstanbul, Türkiye\n\nhttp://www.ryldubai.com/",
       "place_id": "ChIJRYss1vO9yhQR9OPDAJTzqVE",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJRYss1vO9yhQR9OPDAJTzqVE&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Bucharest",
-      "country": "Romania",
+      "country": "please email romania.groups@flydubai.com",
       "iata": "",
-      "emails": [
-        "romania.groups@flydubai.com"
-      ],
+      "emails": [],
       "phones": [],
       "hours": "",
       "status": "",
-      "address": "Mihai Eminescu Street, 108-112\nBucharest – Sector 2\nRomania",
+      "address": "Mihai Eminescu Street, 108-112\nBucharest – Sector 2\nRomania\n\nFor group bookings, please email romania.groups@flydubai.com",
       "place_id": "EjVTdHJhZGEgTWloYWkgRW1pbmVzY3UgMTA4LCBCdWN1cmXImXRpIDAzMDE2NywgUm9tYW5pYSIwEi4KFAoSCSeIsqxM_7FAET24VpdwIUweEGwqFAoSCWHjF-JK_7FAERp4pIwB7ITH",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=EjVTdHJhZGEgTWloYWkgRW1pbmVzY3UgMTA4LCBCdWN1cmXImXRpIDAzMDE2NywgUm9tYW5pYSIwEi4KFAoSCSeIsqxM_7FAET24VpdwIUweEGwqFAoSCWHjF-JK_7FAERp4pIwB7ITH&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Budapest",
-      "country": "Hungary",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -390,7 +383,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -427,30 +420,28 @@
     },
     {
       "city": "Chennai",
-      "country": "India",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
         "+91 484 485 5588"
       ],
-      "hours": "Monday-Saturday 09:30-13:00, 13:30-17:30",
+      "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Kochi.",
+      "address": "Please contact our Travel Shop in Kochi\n\nLe Meridien Hotel\nKundannoor Jn. Maradu\nKochi 682 304, India\n\nWorking hours:\nMonday-Saturday\n09:30-13:00\n13:30-17:30\nClosed on Sunday and public holidays",
       "place_id": "ChIJxdITBv1zCDsRL2JKqcfClxE",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJxdITBv1zCDsRL2JKqcfClxE&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Chisinau",
-      "country": "Moldova",
+      "country": "please email romania.groups@flydubai.com",
       "iata": "",
-      "emails": [
-        "romania.groups@flydubai.com"
-      ],
+      "emails": [],
       "phones": [],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Bucharest.",
+      "address": "Please contact our Travel Shop in Bucharest\n\nMihai Eminescu Street, 108-112\nBucharest – Sector 2\nRomania\n\nFor group bookings, please email romania.groups@flydubai.com",
       "place_id": "EjVTdHJhZGEgTWloYWkgRW1pbmVzY3UgMTA4LCBCdWN1cmXImXRpIDAzMDE2NywgUm9tYW5pYSIwEi4KFAoSCSeIsqxM_7FAET24VpdwIUweEGwqFAoSCWHjF-JK_7FAERp4pIwB7ITH",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=EjVTdHJhZGEgTWloYWkgRW1pbmVzY3UgMTA4LCBCdWN1cmXImXRpIDAzMDE2NywgUm9tYW5pYSIwEi4KFAoSCSeIsqxM_7FAET24VpdwIUweEGwqFAoSCWHjF-JK_7FAERp4pIwB7ITH&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -585,7 +576,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Zagreb travel shop for assistance.",
+      "address": "Please contact our Zagreb travel shop for assistance.\nKrsnjavoga 1 (hotel Westin)\nZagreb 10000, Croatia",
       "place_id": "ChIJX8tfaOXWZUcRIjx1fm4MrZM",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJX8tfaOXWZUcRIjx1fm4MrZM&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -645,14 +636,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Faisalabad",
-      "country": "Pakistan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -660,14 +651,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Office # 108\n1st floor Regency Arcade\nThe mall Faisalabad\nFaisalabad, Pakistan",
+      "address": "Office # 108\n1st floor Regency Arcade\nThe mall Faisalabad\nFaisalabad, Pakistan\n\nCall centre (from within Pakistan):\n111 CALL FZ (2255 39)",
       "place_id": "ChIJYVUFKCBoIjkRt5HVFg9XP4Y",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJYVUFKCBoIjkRt5HVFg9XP4Y&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Frankfurt",
-      "country": "Germany",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -682,37 +673,35 @@
     },
     {
       "city": "Hyderabad",
-      "country": "India",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
         "+91 40 40276592"
       ],
-      "hours": "Monday-Saturday 10:00-13:30, 14:00-18:00",
+      "hours": "",
       "status": "",
-      "address": "D.NO.3-6-524\nZee Plaza\n2nd floor, flat no. 203\nStreet no. 7\nOpposite to Minerva Hotel Himayathnagar\nHyderabad-500029, India",
+      "address": "D.NO.3-6-524\nZee Plaza\n2nd floor, flat no. 203\nStreet no. 7\nOpposite to Minerva Hotel Himayathnagar\nHyderabad-500029, India\n\nWorking hours:\nMonday-Saturday\n10:00-13:30\n14:00-18:00\nClosed on Sunday and public holidays",
       "place_id": "ChIJk6kaIN2ZyzsRi07MSEpGOu0",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJk6kaIN2ZyzsRi07MSEpGOu0&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Iasi",
-      "country": "Romania",
+      "country": "please email romania.groups@flydubai.com",
       "iata": "",
-      "emails": [
-        "romania.groups@flydubai.com"
-      ],
+      "emails": [],
       "phones": [],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Bucharest.",
+      "address": "Please contact our Travel Shop in Bucharest\n\nMihai Eminescu Street, 108-112\nBucharest – Sector 2\nRomania\n\nFor group bookings, please email romania.groups@flydubai.com",
       "place_id": "EjVTdHJhZGEgTWloYWkgRW1pbmVzY3UgMTA4LCBCdWN1cmXImXRpIDAzMDE2NywgUm9tYW5pYSIwEi4KFAoSCSeIsqxM_7FAET24VpdwIUweEGwqFAoSCWHjF-JK_7FAERp4pIwB7ITH",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=EjVTdHJhZGEgTWloYWkgRW1pbmVzY3UgMTA4LCBCdWN1cmXImXRpIDAzMDE2NywgUm9tYW5pYSIwEi4KFAoSCSeIsqxM_7FAET24VpdwIUweEGwqFAoSCWHjF-JK_7FAERp4pIwB7ITH&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Islamabad",
-      "country": "Pakistan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -720,14 +709,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Royal Plaza\n30 East, Ground floor\nFazl-ul-Haq road, Blue area\nIslamabad, Pakistan",
+      "address": "Royal Plaza\n30 East, Ground floor\nFazl-ul-Haq road, Blue area\nIslamabad, Pakistan\n\nCall centre (from within Pakistan):\n111 CALL FZ (2255 39)",
       "place_id": "ChIJ1WZHUbu_3zgRxX26nCfquQQ",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJ1WZHUbu_3zgRxX26nCfquQQ&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Istanbul",
-      "country": "Turkey",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -735,14 +724,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Ataköy 2-5-6.Kısım Rauf Orbay Cd.\nYalıataköy Sitesi C Blok Kat:2 No:23\nBakırköy-Ataköy / İstanbul, 34158\nİstanbul, Türkiye",
+      "address": "Ataköy 2-5-6.Kısım Rauf Orbay Cd.\nYalıataköy Sitesi C Blok Kat:2 No:23\nBakırköy-Ataköy / İstanbul, 34158\nİstanbul, Türkiye\n\nhttp://www.ryldubai.com/",
       "place_id": "ChIJRYss1vO9yhQR9OPDAJTzqVE",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJRYss1vO9yhQR9OPDAJTzqVE&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Jeddah",
-      "country": "Saudi Arabia",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -787,7 +776,7 @@
     },
     {
       "city": "Karachi",
-      "country": "Pakistan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -795,7 +784,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "S-6-7, Caesars Tower\nOpp. Ayesha Bawani Academy\nShahrah-e-Faisal\nKarachi, Pakistan",
+      "address": "S-6-7, Caesars Tower\nOpp. Ayesha Bawani Academy\nShahrah-e-Faisal\nKarachi, Pakistan\n\nCall centre (from within Pakistan):\n111 CALL FZ (2255 39)",
       "place_id": "ChIJR1QOBH4-sz4RIix8fheG4GM",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJR1QOBH4-sz4RIix8fheG4GM&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -817,20 +806,18 @@
     },
     {
       "city": "Kazan",
-      "country": "Russia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.russia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 (495) 215 1630"
       ],
       "hours": "",
       "status": "",
       "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "place_id": "ChIJL-HgMQEZ6zkRDyp9txx2rcA",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJL-HgMQEZ6zkRDyp9txx2rcA&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Kerman",
@@ -842,7 +829,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -857,37 +844,37 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Kochi",
-      "country": "India",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
         "+91 484 485 5588"
       ],
-      "hours": "Monday-Saturday 09:30-13:00, 13:30-17:30",
+      "hours": "",
       "status": "",
-      "address": "Le Meridien Hotel\nKundannoor Jn. Maradu\nKochi 682 304, India",
+      "address": "Le Meridien Hotel\nKundannoor Jn. Maradu\nKochi 682 304, India\n\nWorking hours:\nMonday-Saturday\n09:30-13:00\n13:30-17:30\nClosed on Sunday and public holidays",
       "place_id": "ChIJxdITBv1zCDsRL2JKqcfClxE",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJxdITBv1zCDsRL2JKqcfClxE&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Kozhikode",
-      "country": "India",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
         "+91 484 485 5588"
       ],
-      "hours": "Monday-Saturday 09:30-13:00, 13:30-17:30",
+      "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Kochi.",
+      "address": "Please contact our Travel Shop in Kochi \n\nLe Meridien Hotel\nKundannoor Jn. Maradu\nKochi 682 304, India\n\nWorking hours:\nMonday-Saturday\n09:30-13:00\n13:30-17:30\nClosed on Sunday and public holidays",
       "place_id": "ChIJxdITBv1zCDsRL2JKqcfClxE",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJxdITBv1zCDsRL2JKqcfClxE&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -902,9 +889,9 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Bangkok.",
-      "place_id": "ChIJiRyWf0We4jARFX28u-qTRGs",
-      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJiRyWf0We4jARFX28u-qTRGs&hl=en-US",
+      "address": "Please contact our Travel Shop in Bangkok\n\n14th Floor, Charn Issara Tower II\n2922/215 New Petchburi Road\nBangkapi, Huaykwang\nBangkok 10310, Thailand",
+      "place_id": "ChIJiRyWf0We4jARFX28u-qTRGs ",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJiRyWf0We4jARFX28u-qTRGs%20&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
@@ -917,7 +904,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Warsaw.",
+      "address": "Please contact our Travel Shop in Warsaw.\n\nKoszykowa street 69\nOffice 5\n00-667 Warsaw, Poland",
       "place_id": "ChIJmXdlGOzMHkcRO8Ghi8MP9Ok",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJmXdlGOzMHkcRO8Ghi8MP9Ok&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -939,7 +926,7 @@
     },
     {
       "city": "Lahore",
-      "country": "Pakistan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -947,22 +934,22 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Shop no. 3, Mezzanine floor\n9-Arches Shopping Arcade\nMM Alam Road, Gulberg III\nLahore, Pakistan",
+      "address": "Shop no. 3, Mezzanine floor\n9-Arches Shopping Arcade\nMM Alam Road, Gulberg III\nLahore, Pakistan\n\nCall centre (from within Pakistan):\n111 CALL FZ (2255 39)",
       "place_id": "ChIJ-SLjSlEEGTkRwZ8MSy2QIwM",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJ-SLjSlEEGTkRwZ8MSy2QIwM&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Langkawi",
-      "country": "Malaysia",
+      "country": "09:00-13:00",
       "iata": "",
       "emails": [],
       "phones": [
         "+60 4-228 1110"
       ],
-      "hours": "Monday-Friday, 09:00-18:00, Saturday, 09:00-13:00",
+      "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Penang.",
+      "address": "Please contact our Travel Shop in Penang.\n\nJEN Hotel, Magazine Road\nGeorgetown,10300\nPenang, Malaysia\n\nOpening timings (GMT+8):\nMonday-Friday, 09:00-18:00\nSaturday, 09:00-13:00",
       "place_id": "ChIJ0_ceR5rDSjARB97A8VgIhfQ",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJ0_ceR5rDSjARB97A8VgIhfQ&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -977,7 +964,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -992,7 +979,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please get in touch with flydubai Ljubljana\nAirport Office for assistance.",
+      "address": "Please get in touch with flydubai Ljubljana\nAirport Office for assistance.\nZgornji Brnik 130a, 4210 Brnik - Aerodrom\nLjubljana, Slovenia",
       "place_id": "ChIJmccqywu2ekcRCLzbwPMg0i8",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJmccqywu2ekcRCLzbwPMg0i8&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -1029,20 +1016,18 @@
     },
     {
       "city": "Makhachkala",
-      "country": "Russia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.russia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 (495) 215 1630"
       ],
       "hours": "",
       "status": "",
-      "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "helpdesk.russia@flydubai.com",
+      "place_id": "ChIJrepHDPy-vRURThGeA-CduJQ",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJrepHDPy-vRURThGeA-CduJQ&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Male'",
@@ -1084,7 +1069,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -1106,74 +1091,67 @@
     },
     {
       "city": "Mineralnye Vody",
-      "country": "Russia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.russia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 (495) 215 1630"
       ],
       "hours": "",
       "status": "",
-      "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "helpdesk.russia@flydubai.com",
+      "place_id": "ChIJvTJqusjGhkcRyBYW43oIox0",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJvTJqusjGhkcRyBYW43oIox0&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Minsk",
-      "country": "Belarus",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.belarus@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 495 215 16 30"
       ],
       "hours": "",
       "status": "",
-      "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "helpdesk.belarus@flydubai.com",
+      "place_id": "ChIJvTJqusjGhkcRyBYW43oIox0",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJvTJqusjGhkcRyBYW43oIox0&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Mombasa",
-      "country": "Kenya",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
-        "+254 716 000 044",
-        "+254 756 0000 35"
+        "+254 716 000 044"
       ],
       "hours": "",
       "status": "",
-      "address": "Ground floor, G-15 Nkurumah Road\nMombasa Trade Center (former Ambalal Building)\nMombasa, Kenya",
+      "address": "Ground floor, G-15 Nkurumah Road\nMombasa Trade Center (former Ambalal Building)\nMombasa, Kenya\n\nReservations: +254 756 0000 35",
       "place_id": "ChIJ3yla-SETQBgRzwXU5PHlGXI",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJ3yla-SETQBgRzwXU5PHlGXI&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Moscow",
-      "country": "Russia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.russia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 (495) 215 1630"
       ],
       "hours": "",
       "status": "",
-      "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "helpdesk.russia@flydubai.com",
+      "place_id": "ChIJ3yla-SETQBgRzwXU5PHlGXI",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJ3yla-SETQBgRzwXU5PHlGXI&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Multan",
-      "country": "Pakistan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -1181,22 +1159,22 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Bomanji Square office # 25-26\n1st floor\nNear Bomanji chowk, Multan Cantt\nMultan, Pakistan",
+      "address": "Bomanji Square office # 25-26\n1st floor\nNear Bomanji chowk, Multan Cantt\nMultan, Pakistan\n\nCall centre (from within Pakistan):\n111 CALL FZ (2255 39)",
       "place_id": "ChIJ46WSKn0xOzkRN8eqvg6bYoM",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJ46WSKn0xOzkRN8eqvg6bYoM&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Mumbai",
-      "country": "India",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
         "+91 (022) 6725 1231"
       ],
-      "hours": "Monday-Saturday 09:30-13:00, 13:30-17:30",
+      "hours": "",
       "status": "",
-      "address": "DBS Business center\nCabin number - 917, ground floor\nKanakia Wall Street - B wing\nAndheri Kurla Road\nAndheri (East)\nMumbai - 400 093, India",
+      "address": "DBS Business center\nCabin number - 917, ground floor\nKanakia Wall Street - B wing\nAndheri Kurla Road\nAndheri (East)\nMumbai - 400 093, India\n\nWorking hours:\nMonday-Saturday\n09:30-13:00\n13:30-17:30\nClosed on Sunday and public holidays",
       "place_id": "ChIJA5-MWDDI5zsROUNwoMXo4p8",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJA5-MWDDI5zsROUNwoMXo4p8&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -1218,23 +1196,22 @@
     },
     {
       "city": "Nairobi",
-      "country": "Kenya",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
-        "+254 716 000 044",
-        "+254 753 0000 35"
+        "+254 716 000 044"
       ],
       "hours": "",
       "status": "",
-      "address": "1st Floor, Office # 6, Building Stellato\n#42 Muthithi Road, Westlands\nNairobi, Kenya",
+      "address": "1st Floor, Office # 6, Building Stellato\n#42 Muthithi Road, Westlands\nNairobi, Kenya\n\nReservations: +254 753 0000 35",
       "place_id": "ChIJQ2nKpD4XLxgRQ-wc7nRpjdM",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJQ2nKpD4XLxgRQ-wc7nRpjdM&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Najaf",
-      "country": "Iraq",
+      "country": "please call on the provided numbers.",
       "iata": "",
       "emails": [],
       "phones": [
@@ -1243,56 +1220,51 @@
       "hours": "",
       "status": "",
       "address": "For assistance, please call on the provided numbers.",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "place_id": "ChIJQ2nKpD4XLxgRQ-wc7nRpjdM",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJQ2nKpD4XLxgRQ-wc7nRpjdM&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Paris",
-      "country": "France",
+      "country": "",
       "iata": "",
-      "emails": [
-        "flydubaifrance.sales@aviareps.com",
-        "flydubaifrance.res@aviareps.com"
-      ],
+      "emails": [],
       "phones": [
         "+33 1 87 89 48 85"
       ],
       "hours": "",
       "status": "",
-      "address": "For sales please email: flydubaifrance.sales@aviareps.com. For reservations please email: flydubaifrance.res@aviareps.com",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "For sales:\nflydubaifrance.sales@aviareps.com\n\nFor reservations:\nflydubaifrance.res@aviareps.com",
+      "place_id": "ChIJQ2nKpD4XLxgRQ-wc7nRpjdM",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJQ2nKpD4XLxgRQ-wc7nRpjdM&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Penang",
-      "country": "Malaysia",
+      "country": "09:00-13:00",
       "iata": "",
       "emails": [],
       "phones": [
         "+60 4-228 1110"
       ],
-      "hours": "Monday-Friday, 09:00-18:00, Saturday, 09:00-13:00",
+      "hours": "",
       "status": "",
-      "address": "JEN Hotel, Magazine Road\nGeorgetown,10300\nPenang, Malaysia",
+      "address": "JEN Hotel, Magazine Road\nGeorgetown,10300\nPenang, Malaysia\n\nOpening timings (GMT+8):\nMonday-Friday, 09:00-18:00\nSaturday, 09:00-13:00",
       "place_id": "ChIJ0_ceR5rDSjARB97A8VgIhfQ",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJ0_ceR5rDSjARB97A8VgIhfQ&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Prague",
-      "country": "Czech Republic",
+      "country": "",
       "iata": "",
-      "emails": [
-        "fzsales.prague@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+420 224 282 820"
       ],
       "hours": "",
       "status": "",
-      "address": "Opletalova 57\n110 00 Prague, Czech Republic",
+      "address": "Opletalova 57\n110 00 Prague, Czech Republic\n\nfzsales.prague@flydubai.com",
       "place_id": "EitPcGxldGFsb3ZhIDU3LCAxMTAgMDAgTm92w6kgTcSbc3RvLCBDemVjaGlhIjASLgoUChIJwd46S5SUC0cRrp-0bqu62VgQOSoUChIJaxo5dpOUC0cRM7AIQ1vncwM",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=EitPcGxldGFsb3ZhIDU3LCAxMTAgMDAgTm92w6kgTcSbc3RvLCBDemVjaGlhIjASLgoUChIJwd46S5SUC0cRrp-0bqu62VgQOSoUChIJaxo5dpOUC0cRM7AIQ1vncwM&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -1307,14 +1279,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Quetta",
-      "country": "Pakistan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -1322,7 +1294,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Office # 5-6\nGold City Shopping Mall\nJinnah road\nQuetta, Pakistan",
+      "address": "Office # 5-6\nGold City Shopping Mall\nJinnah road\nQuetta, Pakistan\n\nCall centre (from within Pakistan):\n111 CALL FZ (2255 39)",
       "place_id": "ChIJNwWkQTHe0j4RBWne2RQbGuQ",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJNwWkQTHe0j4RBWne2RQbGuQ&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -1344,7 +1316,7 @@
     },
     {
       "city": "Riga",
-      "country": "Latvia",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -1353,9 +1325,9 @@
       "hours": "",
       "status": "",
       "address": "Please get in touch with us using the provided number or email address.",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "place_id": "ChIJfTGIsdN29j4RBimn5YwVgyM",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJfTGIsdN29j4RBimn5YwVgyM&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Riyadh",
@@ -1374,20 +1346,18 @@
     },
     {
       "city": "Rostov-on-Don",
-      "country": "Russia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.russia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 (495) 215 1630"
       ],
       "hours": "",
       "status": "",
-      "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "helpdesk.russia@flydubai.com",
+      "place_id": "ChIJ6WljRxYELz4Rn4-yWdlWbWk",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJ6WljRxYELz4Rn4-yWdlWbWk&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Salalah",
@@ -1414,27 +1384,25 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Vienna.",
+      "address": "Please contact our Travel Shop in Vienna.\n\nTheobaldgasse 19/3\n1060 Vienna, Austria",
       "place_id": "EiRUaGVvYmFsZGdhc3NlIDE5LCAxMDYwIFdpZW4sIEF1c3RyaWEiMBIuChQKEgl9kZ6OjwdtRxE5tfdf1OtHBRATKhQKEgkNgbZdhQdtRxFNzhXF7RINMA",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=EiRUaGVvYmFsZGdhc3NlIDE5LCAxMDYwIFdpZW4sIEF1c3RyaWEiMBIuChQKEgl9kZ6OjwdtRxE5tfdf1OtHBRATKhQKEgkNgbZdhQdtRxFNzhXF7RINMA&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Samara",
-      "country": "Russia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.russia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 (495) 215 1630"
       ],
       "hours": "",
       "status": "",
-      "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "helpdesk.russia@flydubai.com",
+      "place_id": "EiRUaGVvYmFsZGdhc3NlIDE5LCAxMDYwIFdpZW4sIEF1c3RyaWEiMBIuChQKEgl9kZ6OjwdtRxE5tfdf1OtHBRATKhQKEgkNgbZdhQdtRxFNzhXF7RINMA",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=EiRUaGVvYmFsZGdhc3NlIDE5LCAxMDYwIFdpZW4sIEF1c3RyaWEiMBIuChQKEgl9kZ6OjwdtRxE5tfdf1OtHBRATKhQKEgkNgbZdhQdtRxFNzhXF7RINMA&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Sarajevo",
@@ -1476,14 +1444,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Sialkot",
-      "country": "Pakistan",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -1491,7 +1459,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Office no. 2\nSialkot Chamber of Commerce Building\nDC Road\nSialkot, Pakistan",
+      "address": "Office no. 2\nSialkot Chamber of Commerce Building\nDC Road\nSialkot, Pakistan\n\nCall centre (from within Pakistan) 111 CALL FZ (2255 39)",
       "place_id": "ChIJD9KpYlDqHjkR0tf3X79yA6g",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJD9KpYlDqHjkR0tf3X79yA6g&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -1536,7 +1504,7 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Tehran.",
+      "address": "Please contact our Travel Shop in Tehran\n\nUnit: 303, Ribbon Tehran\nAndarzgoo Blvd.\nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
@@ -1581,14 +1549,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Unit: 303, Ribbon Tehran\nAndarzgoo Blvd. \nTehran, Iran",
+      "address": "Unit: 303, Ribbon Tehran\nAndarzgoo Blvd.  \nTehran, Iran",
       "place_id": "ChIJH-MUI8QFjj8R9xd98GMtBqc",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJH-MUI8QFjj8R9xd98GMtBqc&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Tel Aviv",
-      "country": "Israel",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -1611,10 +1579,10 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact Belgrade Travel Shop for assistance.",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "Please contact Belgrade Travel Shop for assistance.\n\nKneza Mihaila street 30\n11000 Belgrade, Serbia",
+      "place_id": "ChIJjzKF531MHRURHwp-_wa-dyw",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJjzKF531MHRURHwp-_wa-dyw&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Tivat",
@@ -1626,14 +1594,14 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact Belgrade Travel Shop for assistance.",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "Please contact Belgrade Travel Shop for assistance.\n\nKneza Mihaila street 30\n11000 Belgrade, Serbia",
+      "place_id": "ChIJjzKF531MHRURHwp-_wa-dyw",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJjzKF531MHRURHwp-_wa-dyw&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Trabzon",
-      "country": "Turkey",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -1641,31 +1609,29 @@
       ],
       "hours": "",
       "status": "",
-      "address": "Please contact our Travel Shop in Istanbul.",
+      "address": "Please contact our Travel Shop in Istanbul.\n\nAtaköy 2-5-6.Kısım Rauf Orbay Cd.\nYalıataköy Sitesi C Blok Kat:2 No:23\nBakırköy-Ataköy / İstanbul, 34158\nİstanbul, Türkiye\n\nhttp://www.ryldubai.com/",
       "place_id": "ChIJRYss1vO9yhQR9OPDAJTzqVE",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJRYss1vO9yhQR9OPDAJTzqVE&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Ufa",
-      "country": "Russia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.russia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 (495) 215 1630"
       ],
       "hours": "",
       "status": "",
-      "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "helpdesk.russia@flydubai.com",
+      "place_id": "ChIJRYss1vO9yhQR9OPDAJTzqVE",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJRYss1vO9yhQR9OPDAJTzqVE&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Vilnius",
-      "country": "Lithuania",
+      "country": "",
       "iata": "",
       "emails": [],
       "phones": [
@@ -1674,26 +1640,24 @@
       "hours": "",
       "status": "",
       "address": "Please get in touch with us using the provided number or email address.",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "place_id": "ChIJRYss1vO9yhQR9OPDAJTzqVE",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJRYss1vO9yhQR9OPDAJTzqVE&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Yekaterinburg",
-      "country": "Russia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "helpdesk.russia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+7 (495) 215 1630"
       ],
       "hours": "",
       "status": "",
-      "address": "",
-      "place_id": "",
-      "map_url": "",
-      "map_img": ""
+      "address": "helpdesk.russia@flydubai.com",
+      "place_id": "ChIJRYss1vO9yhQR9OPDAJTzqVE",
+      "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJRYss1vO9yhQR9OPDAJTzqVE&hl=en-US",
+      "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"
     },
     {
       "city": "Yerevan",
@@ -1712,17 +1676,15 @@
     },
     {
       "city": "Zagreb",
-      "country": "Croatia",
+      "country": "",
       "iata": "",
-      "emails": [
-        "croatia@flydubai.com"
-      ],
+      "emails": [],
       "phones": [
         "+385 1 4829 495/496"
       ],
       "hours": "",
       "status": "",
-      "address": "Krsnjavoga 1 (hotel Westin)\nZagreb 10000, Croatia",
+      "address": "Krsnjavoga 1 (hotel Westin)\nZagreb 10000, Croatia\n\ncroatia@flydubai.com",
       "place_id": "ChIJX8tfaOXWZUcRIjx1fm4MrZM",
       "map_url": "https://www.google.com/maps/search/?query=,&z=15&api=1&query_place_id=ChIJX8tfaOXWZUcRIjx1fm4MrZM&hl=en-US",
       "map_img": "https://www.flydubai.com/en/media/dxb_off_locator_tcm8-183583.png"

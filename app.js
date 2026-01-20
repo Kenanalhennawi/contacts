@@ -67,18 +67,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }));
     }
 
-    async function selectDepartment(dept) {
-        currentDepartment = dept;
-        const meta = departmentRegistry[dept];
-        if (!meta) return;
+    async function sendEmail(toEmail,subject,messageText){
+  const res=await fetch(cfg.WORKER_URL,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      type:'email',
+      sendTo:toEmail,
+      subject,
+      text:messageText,
+      html:String(messageText||'').split('\n').join('<br>')
+    })
+  });
 
-        statusEl.textContent = `Loading ${dept}...`;
-        clearCard();
-        searchEl.value = '';
-        renderSuggestions([]);
+  const raw=await res.text();
+  let j=null;
+  try{j=raw?JSON.parse(raw):null;}catch{j=null;}
 
-        const data = await loadJson(meta.url);
-        if (!data) return;
+  const ok=!!(res.ok && j && (j.ok===true || j.success===true));
+  if(!ok){
+    const err=(j && (j.error ?? j.message ?? j)) ?? (raw || `HTTP ${res.status}`);
+    const msg=(typeof err==='string')?err:JSON.stringify(err,null,2);
+    throw new Error(msg || `HTTP ${res.status}`);
+  }
+
+  return j;
+}
+
 
         if (meta.kind === 'location') {
             searchIndex = buildLocationIndex(data, dept);
@@ -327,3 +342,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initialize();
 });
+
